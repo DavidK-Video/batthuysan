@@ -3,501 +3,795 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bạt HDPE - Màng chống thấm HDPE Chính Hãng | Hưng Thịnh Eco</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>HƯNG THỊNH ECO - Bạt HDPE - Màng chống thấm HDPE</title>
     <style>
-        /* --- ĐỊNH DẠNG PHONG CÁCH GIAO DIỆN --- */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Roboto', Arial, sans-serif; }
-        body { color: #333; line-height: 1.6; background-color: #fcfcfc; }
-        a { text-decoration: none; color: inherit; transition: 0.2s; }
-        img { max-width: 100%; height: auto; display: block; border-radius: 4px; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
-
-        /* --- TOP BAR TRÊN CÙNG --- */
-        .top-bar { background-color: #ffffff; border-bottom: 1px solid #eee; padding: 10px 0; font-size: 13px; color: #555; }
-        .top-bar .container { display: flex; justify-content: flex-end; gap: 25px; align-items: center; }
-        .top-bar-item { display: flex; align-items: center; gap: 6px; }
-        .top-bar-item i { color: #005A36; }
-
-        /* --- KHỐI THƯƠNG HIỆU LOGO --- */
-        .header-middle { padding: 20px 0; background: #fff; }
-        .header-middle .container { display: flex; justify-content: space-between; align-items: center; }
-        
-        .brand-logo { display: flex; flex-direction: column; }
-        .logo-main { font-size: 28px; font-weight: 900; color: #005A36; letter-spacing: -0.5px; display: flex; align-items: center; gap: 3px; }
-        .logo-main span.eco { background: #005A36; color: #fff; padding: 1px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-left: 2px; }
-        .logo-sub { font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-top: -2px; font-weight: 500; }
-
-        .nav-links-sub { display: flex; gap: 25px; font-size: 14px; font-weight: 500; }
-        .nav-links-sub a:hover { color: #005A36; }
-
-        /* --- NAVIGATION BAR CHÍNH (XANH LÁ) + DROPDOWN --- */
-        .main-nav-bar { background-color: #005A36; position: relative; z-index: 999; }
-        .main-nav-bar ul { display: flex; list-style: none; }
-        .main-nav-bar ul li { position: relative; border-right: 1px solid rgba(255,255,255,0.12); }
-        .main-nav-bar ul li a { display: block; padding: 14px 20px; color: #fff; font-size: 14px; font-weight: bold; }
-        .main-nav-bar ul li:hover > a, .main-nav-bar ul li.active > a { background-color: #e67e22; }
-
-        /* Cấu trúc Dropdown menu mục Màng Chống Thấm HDPE */
-        .dropdown-menu { position: absolute; top: 100%; left: 0; background: #ffffff; min-width: 260px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: none; list-style: none; border-top: 3px solid #e67e22; }
-        .dropdown-menu li { border-right: none; border-bottom: 1px solid #eee; width: 100%; }
-        .dropdown-menu li a { color: #333 !important; padding: 11px 20px; font-weight: 500; font-size: 13.5px; }
-        .dropdown-menu li a:hover { background-color: #f5f5f5; color: #005A36 !important; padding-left: 25px; }
-        .main-nav-bar ul li:hover .dropdown-menu { display: block; }
-
-        /* --- BREADCRUMB --- */
-        .breadcrumb { padding: 15px 0 5px 0; font-size: 12px; color: #666; }
-        .breadcrumb a { color: #333; }
-        .breadcrumb span { color: #999; }
-
-        /* --- BỐ CỤC CHÍNH 2 CỘT --- */
-        .layout-grid { display: flex; gap: 30px; margin-top: 10px; margin-bottom: 60px; }
-        .left-content { flex: 3; max-width: 75%; }
-        .right-sidebar { flex: 1; max-width: 25%; min-width: 300px; }
-
-        /* --- CHI TIẾT NỘI DUNG BÀI VIẾT --- */
-        .main-title { font-size: 28px; color: #005A36; font-weight: 700; margin-bottom: 15px; }
-        .text-block { font-size: 15px; margin-bottom: 18px; text-align: justify; color: #444; }
-        .text-block strong { color: #111; }
-        .section-title { font-size: 20px; color: #005A36; font-weight: bold; margin: 35px 0 15px 0; border-bottom: 2px solid #005A36; padding-bottom: 6px; display: flex; align-items: center; gap: 8px; }
-        .sub-section-title { font-size: 16px; color: #2c3e50; font-weight: bold; margin: 20px 0 10px 0; padding-left: 8px; border-left: 3px solid #e67e22; }
-        
-        .list-style { margin-left: 22px; margin-bottom: 20px; font-size: 15px; color: #444; }
-        .list-style li { margin-bottom: 8px; }
-
-        /* Khung hiển thị ảnh mẫu chuẩn */
-        .image-showcase { border: 1px solid #e5e5e5; padding: 6px; background: #fff; margin: 20px 0; border-radius: 4px; }
-        .image-showcase img.big-img { width: 100%; height: auto; display: block; }
-        .thumb-list { display: flex; gap: 6px; margin-top: 6px; overflow-x: auto; }
-        .thumb-list img { width: 68px; height: 48px; object-fit: cover; border: 1px solid #ccc; opacity: 0.8; cursor: pointer; }
-
-        /* Bảng giá chi tiết mẫu */
-        .price-section { margin: 25px 0; }
-        .price-header { background: #f4faf7; padding: 12px 15px; border-left: 4px solid #005A36; display: flex; justify-content: space-between; align-items: center; border-radius: 0 4px 4px 0; }
-        .price-title-text { font-size: 16px; font-weight: bold; color: #005A36; }
-        .price-sub-text { font-size: 12px; color: #666; margin-top: 2px; }
-        .tag-status { background: #fff; border: 1px solid #005A36; color: #005A36; font-size: 11px; padding: 3px 8px; font-weight: bold; border-radius: 2px; }
-        
-        .data-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; text-align: left; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
-        .data-table th, .data-table td { border: 1px solid #dddddd; padding: 12px; }
-        .data-table th { background-color: #f8f9fa; color: #333; font-weight: bold; }
-        .data-table tr:nth-child(even) { background-color: #fdfdfd; }
-        .note-text { font-size: 12px; color: #666; font-style: italic; margin-top: 6px; }
-
-        /* Sản phẩm lưới ô vuông bên dưới bài viết */
-        .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 25px; }
-        .product-card { background: #fff; border: 1px solid #e2e8f0; padding: 15px; text-align: center; border-radius: 4px; transition: 0.3s; }
-        .product-card:hover { transform: translateY(-4px); box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-color: #005A36; }
-        .product-card img { width: 100%; height: 150px; object-fit: cover; background: #eee; margin-bottom: 12px; }
-        .product-name { font-size: 14px; font-weight: bold; color: #333; height: 40px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin-bottom: 8px; }
-        .product-price { font-size: 14px; color: #e67e22; font-weight: bold; }
-
-        /* Bài viết liên quan */
-        .related-box { border-top: 2px solid #eee; margin-top: 40px; padding-top: 20px; }
-        .related-title { font-size: 16px; font-weight: bold; color: #333; margin-bottom: 15px; text-transform: uppercase; }
-        .related-item { margin-bottom: 12px; font-size: 14px; }
-        .related-item a { color: #005A36; font-weight: 500; }
-        .related-item a:hover { color: #e67e22; }
-
-        /* --- SIDEBAR BÊN PHẢI --- */
-        .sidebar-sticky { position: sticky; top: 15px; display: flex; flex-direction: column; gap: 20px; }
-        
-        /* Hộp tư vấn */
-        .box-sidebar { background: #fff; border: 1px solid #e2e8f0; border-radius: 4px; padding: 25px 15px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
-        .box-title-sb { font-size: 14px; font-weight: bold; color: #444; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 0.5px; }
-        .avatar-holder { width: 80px; height: 80px; margin: 0 auto 12px auto; background: #f4faf7; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-        .avatar-holder i { font-size: 40px; color: #005A36; }
-        .phone-display { display: block; font-size: 28px; color: #005A36; font-weight: 900; margin: 8px 0; }
-        
-        .chat-row { display: flex; justify-content: center; gap: 15px; margin-top: 15px; }
-        .btn-chat-link { width: 46px; height: 46px; border: 1px solid #ddd; border-radius: 6px; display: flex; align-items: center; justify-content: center; background: #fff; transition: 0.2s; }
-        .btn-chat-link img { width: 26px; height: 26px; }
-        .btn-chat-link:hover { border-color: #005A36; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
-
-        /* Form đăng ký báo giá */
-        .form-sb-box { background: #fff; border: 1px solid #e2e8f0; border-radius: 4px; padding: 25px 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
-        .form-sb-box h3 { font-size: 14px; font-weight: bold; color: #333; text-align: center; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .input-group { margin-bottom: 12px; }
-        .input-control { width: 100%; padding: 11px 12px; border: 1px solid #ccc; border-radius: 3px; font-size: 13.5px; color: #333; outline: none; transition: 0.2s; }
-        .input-control:focus { border-color: #005A36; box-shadow: 0 0 0 2px rgba(0,90,54,0.08); }
-        .textarea-control { width: 100%; padding: 11px 12px; border: 1px solid #ccc; border-radius: 3px; font-size: 13.5px; color: #333; height: 100px; resize: none; font-family: inherit; outline: none; transition: 0.2s; }
-        .textarea-control:focus { border-color: #005A36; box-shadow: 0 0 0 2px rgba(0,90,54,0.08); }
-        
-        .btn-send-form { width: 100%; background: #005A36; color: #fff; border: none; padding: 13px; font-weight: bold; font-size: 14px; text-transform: uppercase; border-radius: 3px; cursor: pointer; transition: 0.3s; }
-        .btn-send-form:hover { background: #004026; box-shadow: 0 3px 10px rgba(0,90,54,0.2); }
-
-        /* Khối cam kết */
-        .commit-list { list-style: none; font-size: 13.5px; color: #444; display: flex; flex-direction: column; gap: 12px; background: #fff; border: 1px solid #e2e8f0; padding: 18px; border-radius: 4px; }
-        .commit-list li { display: flex; align-items: center; gap: 10px; font-weight: 500; }
-        .commit-list li i { color: #005A36; font-size: 16px; }
-
-        /* --- FOOTER CHÂN TRANG --- */
-        .footer-details { background-color: #ffffff; border-top: 1px solid #eee; padding: 45px 0; font-size: 14px; color: #444; }
-        .footer-details .container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-        .footer-col h4 { font-size: 15px; font-weight: bold; color: #111; margin-bottom: 18px; text-transform: uppercase; position: relative; padding-bottom: 5px; }
-        .footer-col h4::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40px; height: 2px; background-color: #e67e22; }
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 10px; font-size: 13.5px; }
-        .footer-col ul li a:hover { color: #005A36; padding-left: 4px; }
-
-        .company-title-ft { font-size: 16px; font-weight: bold; color: #005A36; margin-bottom: 15px; text-transform: uppercase; }
-        .info-txt-ft { font-size: 13.5px; margin-bottom: 8px; line-height: 1.5; }
-
-        .bottom-copyright { background: #005A36; color: rgba(255,255,255,0.85); text-align: center; padding: 15px 0; font-size: 13px; }
-
-        /* --- PHÍM NỔI LIÊN HỆ TIỆN ÍCH ĐỘNG --- */
-        .sticky-contacts { position: fixed; bottom: 30px; left: 25px; z-index: 99999; display: flex; flex-direction: column; gap: 12px; }
-        .contact-circle { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 23px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: 0.3s; }
-        .contact-circle:hover { transform: scale(1.1); }
-        .contact-circle.c-phone { background: #e67e22; animation: phoneShake 1.6s infinite ease-in-out; }
-        .contact-circle.c-zalo { background: #0084FF; }
-        .contact-circle.c-fb { background: #1877F2; }
-
-        @keyframes phoneShake {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230,126,34,0.7); }
-            70% { transform: scale(1.08); box-shadow: 0 0 0 12px rgba(230,126,34,0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230,126,34,0); }
+        :root {
+            --primary-color: #2e7d32;
+            --accent-color: #f57c00;
+            --text-color: #333;
+            --bg-light: #f5f5f5;
         }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { color: var(--text-color); line-height: 1.6; background: #fff; }
+        
+        /* HEADER & NAVIGATION */
+        header { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo-box { cursor: pointer; }
+        .logo-box h2 { color: var(--primary-color); font-size: 22px; letter-spacing: 1px; }
+        .logo-box p { font-size: 11px; color: #666; font-weight: bold; text-transform: uppercase; }
+        
+        nav { display: flex; gap: 20px; }
+        .nav-item { position: relative; padding: 10px 0; }
+        .nav-item > a { text-decoration: none; color: #333; font-weight: bold; font-size: 15px; transition: 0.3s; cursor: pointer; }
+        .nav-item:hover > a { color: var(--primary-color); }
+        
+        /* DROPDOWN MENU */
+        .dropdown { position: absolute; top: 100%; left: 0; background: #fff; min-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); border-top: 3px solid var(--primary-color); display: none; }
+        .dropdown a { display: block; padding: 12px 20px; text-decoration: none; color: #333; font-size: 14px; border-bottom: 1px solid #eee; transition: 0.2s; cursor: pointer; }
+        .dropdown a:hover { background: #f9f9f9; color: var(--accent-color); padding-left: 25px; }
+        .nav-item:hover .dropdown { display: block; }
 
-        /* Responsive */
-        @media (max-width: 992px) {
-            .layout-grid, .footer-details .container { grid-template-columns: 100%; flex-direction: column; }
-            .left-content, .right-sidebar { max-width: 100%; width: 100%; }
-            .header-middle .container { flex-direction: column; gap: 15px; text-align: center; }
-            .top-bar .container { justify-content: center; }
-            .product-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 480px) {
-            .product-grid { grid-template-columns: 100%; }
-        }
+        /* BREADCRUMB */
+        .breadcrumb { background: #f1f8e9; padding: 12px 20px; font-size: 14px; color: #555; border-bottom: 1px solid #e0e0e0; }
+        .breadcrumb span { color: #888; }
+        .breadcrumb a { color: var(--primary-color); text-decoration: none; font-weight: bold; cursor: pointer; }
+
+        /* MAIN LAYOUT */
+        .main-container { max-width: 1200px; margin: 20px auto; display: grid; grid-template-columns: 1fr 320px; gap: 30px; padding: 0 20px; }
+        .page-section { display: none; background: #fff; }
+        .page-section.active { display: block; }
+        
+        /* TYPOGRAPHY & BLOCKS */
+        h1 { color: #222; font-size: 28px; margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 15px; }
+        h3 { color: var(--primary-color); margin: 25px 0 12px; font-size: 18px; position: relative; padding-left: 12px; }
+        h3::before { content: "■"; color: var(--accent-color); position: absolute; left: 0; font-size: 14px; top: 1px; }
+        p { margin-bottom: 15px; text-align: justify; color: #444; }
+        ul, ol { padding-left: 20px; margin-bottom: 20px; }
+        ul li, ol li { margin-bottom: 8px; color: #444; }
+        
+        /* TABLES */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 15px; }
+        table, th, td { border: 1px solid #ddd; }
+        th, td { padding: 12px; text-align: left; }
+        th { background-color: #f5f5f5; color: #333; font-weight: bold; }
+        tr:nth-child(even) { background-color: #fafafa; }
+        
+        /* BANNER HOTLINE & GIÁ */
+        .price-highlight { font-size: 22px; color: #d32f2f; font-weight: bold; margin: 15px 0; }
+        .old-price { text-decoration: line-through; color: #888; font-size: 16px; margin-right: 10px; }
+        
+        /* SIDEBAR */
+        sidebar { background: #fff; }
+        .widget { border: 1px solid #e0e0e0; padding: 20px; margin-bottom: 25px; border-radius: 4px; }
+        .widget-title { font-size: 16px; font-weight: bold; color: var(--primary-color); margin-bottom: 15px; border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; text-transform: uppercase; }
+        .hotline-box { background: #fff3e0; border: 1px dashed var(--accent-color); padding: 15px; text-align: center; border-radius: 4px; margin-bottom: 15px; }
+        .hotline-box p { text-align: center; margin-bottom: 5px; font-weight: bold; }
+        .hotline-number { font-size: 20px; color: #e65100; font-weight: bold; display: block; text-decoration: none; }
+        
+        .policy-list { list-style: none; padding-left: 0; }
+        .policy-list li { padding: 8px 0; border-bottom: 1px dashed #eee; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+        .policy-list li::before { content: "✓"; color: var(--primary-color); font-weight: bold; }
+        
+        /* FLOATING UTILITIES BUTTONS */
+        .floating-buttons { position: fixed; bottom: 20px; left: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 9999; }
+        .float-btn { display: flex; align-items: center; gap: 8px; padding: 10px 15px; color: #fff; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .btn-zalo { background: #0068ff; }
+        .btn-messenger { background: #0084ff; }
+        .btn-call { background: #d32f2f; }
+
+        /* FOOTER */
+        footer { background: #222; color: #ccc; padding: 40px 20px; margin-top: 60px; font-size: 14px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-col h4 { color: #fff; margin-bottom: 15px; font-size: 16px; text-transform: uppercase; border-bottom: 1px solid #444; padding-bottom: 5px; }
+        .footer-col ul { list-style: none; padding-left: 0; }
+        .footer-col ul li { margin-bottom: 8px; }
+        .footer-col ul li a { color: #ccc; text-decoration: none; cursor: pointer; }
+        .footer-col ul li a:hover { color: #fff; }
+        .footer-bottom { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; color: #888; }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-item"><i class="fa-solid fa-envelope"></i> hungthinh.ecohy@gmail.com</div>
-            <div class="top-bar-item"><i class="fa-solid fa-clock"></i> 08:00 - 17:00</div>
-        </div>
-    </div>
-
-    <div class="header-middle">
-        <div class="container">
-            <div class="brand-logo">
-                <a href="https://batthuysan-yohu.online" class="logo-main">HƯNG THỊNH<span class="eco">ECO</span></a>
-                <span class="logo-sub">Vật tư nông nghiệp</span>
+    <header>
+        <div class="header-container">
+            <div class="logo-box" onclick="showPage('home', 'Trang chủ » Bạt HDPE - Màng chống thấm HDPE')">
+                <h2>HƯNG THỊNH ECO</h2>
+                <p>Vật tư nông nghiệp</p>
             </div>
-            <div class="nav-links-sub">
-                <a href="https://batthuysan-yohu.online">Trang chủ</a>
-                <a href="#">Giới thiệu</a>
-                <a href="#">Liên hệ</a>
-                <a href="#">Bài viết</a>
-            </div>
+            <nav>
+                <div class="nav-item"><a onclick="showPage('home', 'Trang chủ » Bạt HDPE - Màng chống thấm HDPE')">Trang chủ</a></div>
+                <div class="nav-item">
+                    <a>Màng Chống Thấm HDPE ▼</a>
+                    <div class="dropdown">
+                        <a onclick="showPage('bat-nuoi-ca', 'Trang chủ » Bạt HDPE » Bạt Lót Ao Hồ Nuôi Cá')">Bạt Lót Ao Hồ Nuôi Cá</a>
+                        <a onclick="showPage('be-bat-hdpe', 'Trang chủ » Bạt HDPE » Bể Bạt HDPE')">Bể Bạt HDPE Lắp Sẵn</a>
+                        <a onclick="showPage('bat-nuoi-tom', 'Trang chủ » Bạt HDPE » Bạt Lót Ao Hồ Nuôi Tôm')">Bạt Lót Ao Hồ Nuôi Tôm</a>
+                        <a onclick="showPage('bat-mai-nha', 'Trang chủ » Bạt HDPE » Bạt Chống Thấm Mái Nhà')">Bạt Chống Thấm Mái Nhà</a>
+                        <a onclick="showPage('bat-chua-nuoc', 'Trang chủ » Bạt HDPE » Bạt Lót Ao Hồ Chứa Nước')">Bạt Lót Ao Hồ Chứa Nước</a>
+                        <a onclick="showPage('bat-san-thuong', 'Trang chủ » Bạt HDPE » Bạt Chống Thấm Sân Thượng')">Bạt Chống Thấm Sân Thượng</a>
+                        <a onclick="showPage('bat-biogas', 'Trang chủ » Bạt HDPE » Bạt Biogas')">Bạt Phủ Hầm Biogas</a>
+                        <a onclick="showPage('phu-kien-bat', 'Trang chủ » Bạt HDPE » Phụ Kiện Màng - Bạt HDPE')">Phụ Kiện Màng - Bạt HDPE</a>
+                    </div>
+                </div>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <nav class="main-nav-bar">
-        <div class="container">
-            <ul>
-                <li class="active">
-                    <a href="#">Màng Chống Thấm HDPE <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-left:2px;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Bạt Lót Ao Hồ Nuôi Cá</a></li>
-                        <li><a href="#">Bể Bạt HDPE</a></li>
-                        <li><a href="#">Bạt Lót Ao Hồ Nuôi Tôm</a></li>
-                        <li><a href="#">Bạt Chống Thấm Mái Nhà</a></li>
-                        <li><a href="#">Bạt Lót Ao Hồ Chứa Nước</a></li>
-                        <li><a href="#">Bạt Chống Thấm Sân Thượng</a></li>
-                        <li><a href="#">Bạt Biogas</a></li>
-                        <li><a href="#">Phụ Kiện Màng – Bạt HDPE</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Vải Địa Kỹ Thuật</a></li>
-                <li><a href="#">Ống Tưới Nhỏ Giọt</a></li>
-                <li><a href="#">Bạt Phủ Chống Cỏ</a></li>
-                <li><a href="#">Lưới Che Nắng</a></li>
-                <li><a href="#">Bầu Ươm</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="breadcrumb" id="breadcrumb-text">Trang chủ » Bạt HDPE - Màng chống thấm HDPE</div>
 
-    <div class="container">
-        <div class="breadcrumb">
-            <a href="https://batthuysan-yohu.online">Trang chủ</a> » <span>Bạt HDPE - Màng chống thấm HDPE</span>
-        </div>
-    </div>
+    <div class="main-container">
+        
+        <main id="main-content">
 
-    <div class="container">
-        <div class="layout-grid">
-            
-            <main class="left-content">
-                <h1 class="main-title">Bạt HDPE - Màng chống thấm HDPE</h1>
+            <div id="home" class="page-section active">
+                <h1>Bạt HDPE - Màng chống thấm HDPE</h1>
+                <p>Bạt HDPE, hay còn gọi là màng chống thấm HDPE, là một vật liệu nổi bật trong các công trình xây dựng, nông nghiệp, thủy lợi và xử lý chất thải. Với tính năng chống thấm vượt trội, bạt HDPE đã trở thành lựa chọn hàng đầu cho các dự án đòi hỏi tính năng chống thấm hiệu quả và bền vững.</p>
                 
-                <p class="text-block">
-                    <strong>Bạt HDPE</strong>, hay còn gọi là màng chống thấm HDPE, là một vật liệu nổi bật trong các công trình xây dựng, nông nghiệp, thủy lợi và xử lý chất thải. Với tính năng chống thấm vượt trội, bạt HDPE đã trở thành lựa chọn hàng đầu cho các dự án đòi hỏi tính năng chống thấm hiệu quả và bền vững.
-                </p>
+                <h3>Sơ lược về bạt HDPE – màng chống thấm HDPE độ bền trên 10 năm</h3>
+                <p>Bạt HDPE là loại màng nhựa được sản xuất từ nguyên liệu High-Density Polyethylene, một loại nhựa nhiệt dẻo có độ bền cơ học cao, khả năng chống thấm nước tuyệt đối và chống chịu hóa chất tốt. Với cấu trúc đặc biệt, màng HDPE có khả năng ngăn chặn sự thẩm thấu của nước và các chất lỏng khác, bảo vệ công trình một cách hiệu quả.</p>
+                
+                <h3>Bảng Giá Màng HDPE (Đơn vị tính: m² - Đơn giá tham khảo)</h3>
+                <p style="font-style: italic; font-size: 14px; color: #666;">Miễn phí tư vấn | Nhận hàn ghép theo yêu cầu</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>QUY CÁCH MÀNG HDPE</th>
+                            <th>ĐVT</th>
+                            <th>ĐỘ DÀY</th>
+                            <th>ĐƠN GIÁ (VND/M²)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Khổ 3/4/5/6 dài theo yêu cầu</td><td>m²</td><td>0.3 mm</td><td>Liên hệ Hotline</td></tr>
+                        <tr><td>2</td><td>Khổ 4/5/6/8 dài theo yêu cầu</td><td>m²</td><td>0.5 mm</td><td>Liên hệ Hotline</td></tr>
+                        <tr><td>3</td><td>Khổ 4/5/6/8 dài theo yêu cầu</td><td>m²</td><td>0.75 mm</td><td>Liên hệ Hotline</td></tr>
+                        <tr><td>4</td><td>Khổ 4/5/6/8 dài theo yêu cầu</td><td>m²</td><td>1 mm</td><td>Liên hệ Hotline</td></tr>
+                        <tr><td>5</td><td>Khổ 4/5/6/8 dài theo yêu cầu</td><td>m²</td><td>2 mm</td><td>Liên hệ Hotline</td></tr>
+                    </tbody>
+                </table>
 
-                <div class="image-showcase">
-                    <img src="image_35f32a.jpg" class="big-img" alt="Bạt HDPE - Màng chống thấm HDPE công trình thực tế" onerror="this.src='https://placehold.co/800x460/005A36/FFFFFF?text=image_35f32a.jpg'">
-                    <div class="thumb-list">
-                        <img src="thumb1.jpg" alt="1" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+1'">
-                        <img src="thumb2.jpg" alt="2" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+2'">
-                        <img src="thumb3.jpg" alt="3" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+3'">
-                        <img src="thumb4.jpg" alt="4" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+4'">
-                        <img src="thumb5.jpg" alt="5" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+5'">
+                <h3>Ứng dụng thực tế đa dạng của Bạt HDPE</h3>
+                <ul>
+                    <li>Lót ao hồ nuôi cá nuôi tôm, tạo môi trường sạch bệnh.</li>
+                    <li>Chống thấm mái nhà, sàn sân thượng chịu thời tiết khắc nghiệt.</li>
+                    <li>Lót ao hồ chứa nước tưới tiêu, hồ thủy lợi vùng hạn mặn.</li>
+                    <li>Phủ hầm Biogas cho các trang trại chăn nuôi gia súc quy mô lớn.</li>
+                </ul>
+            </div>
+
+            <div id="bat-nuoi-ca" class="page-section">
+                <h1>Bạt Lót Ao Hồ Nuôi Cá</h1>
+                <p>Sử dụng bạt lót ao hồ nuôi cá chuyên dụng giúp người nuôi kiểm soát hoàn toàn môi trường nước, ngăn ngừa hiện tượng rò rỉ nước và giữ độ pH luôn ổn định, giúp cá sinh trưởng nhanh chóng, khỏe mạnh.</p>
+                
+                <h3>Thông số và bảng giá tham khảo</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>QUY CÁCH MÀNG HDPE</th>
+                            <th>ĐỘ DÀY</th>
+                            <th>ĐƠN GIÁ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Khổ rộng 3m, 4m, 5m, 6m</td><td>0.3 mm</td><td>Liên hệ Hotline</td></tr>
+                        <tr><td>Khổ rộng 4m, 5m, 6m, 8m</td><td>0.5 mm</td><td>Liên hệ Hotline</td></tr>
+                    </tbody>
+                </table>
+                <h3>Lợi ích vượt trội khi sử dụng bạt lót ao cá</h3>
+                <ul>
+                    <li>Cách ly hoàn toàn nước ao với mạch nước ngầm ô nhiễm bên ngoài.</li>
+                    <li>Dễ dàng sục khí, dọn dẹp vệ sinh đáy ao sau mỗi vụ thu hoạch.</li>
+                    <li>Ngăn chặn tối đa sạt lở bờ ao do mưa bão hoặc dòng chảy gây ra.</li>
+                </ul>
+            </div>
+
+            <div id="be-bat-hdpe" class="page-section">
+                <h1>Bể Bạt HDPE Nuôi Cá, Nuôi Tôm, Nuôi Ốc</h1>
+                <div class="price-highlight"><span class="old-price">180.000 ₫</span> 180.000 ₫ – 1.620.000 ₫</div>
+                
+                <h3>Giới thiệu Bể Bạt HDPE</h3>
+                <p>Bể Bạt HDPE là giải pháp tối ưu trong chăn nuôi và nuôi trồng thủy sản, sử dụng chất liệu màng HDPE (High Density Polyethylene) có độ bền cao, kháng tia UV, chịu được hóa chất và thời tiết khắc nghiệt.</p>
+                <p>So với bể xi măng hay bể nhựa truyền thống, bể bạt HDPE có chi phí đầu tư thấp hơn, thi công nhanh chóng, độ bền trên 10 năm và dễ dàng tháo lắp, di chuyển.</p>
+                
+                <h3>Bể được ứng dụng rộng rãi trong:</h3>
+                <ul>
+                    <li>Nuôi cá, tôm, lươn, ếch, ba ba, cua...</li>
+                    <li>Ủ phân, chứa nước sạch, nước tưới tiêu.</li>
+                    <li>Trồng rau thủy canh, mô hình VAC.</li>
+                </ul>
+
+                <h3>Ưu điểm nổi bật của Bể Bạt HDPE</h3>
+                <ul>
+                    <li><strong>Độ bền cao:</strong> Chất liệu HDPE dày từ 0.3mm – 1.5mm, tuổi thọ trên 10 năm.</li>
+                    <li><strong>Chống thấm tuyệt đối:</strong> Không rò rỉ nước, kháng muối và hóa chất.</li>
+                    <li><strong>Tiết kiệm chi phí:</strong> Giá thành rẻ hơn so với xây bể xi măng.</li>
+                    <li><strong>Thi công nhanh:</strong> Chỉ 1 – 2 ngày là hoàn thiện bể nuôi.</li>
+                    <li>Dễ dàng tháo lắp, di chuyển khi thay đổi vị trí chăn nuôi.</li>
+                    <li>An toàn cho thủy sản: Không gây độc hại, thân thiện môi trường.</li>
+                </ul>
+
+                <h3>Quy cách & Kích thước Bể Bạt HDPE</h3>
+                <p>Bể bạt HDPE được sản xuất theo yêu cầu đa dạng hình tròn hoặc chữ nhật, định hình chắc chắn bằng khung thép bọc nhựa chống rỉ sét sét cao, chịu lực tốt.</p>
+            </div>
+
+            <div id="bat-nuoi-tom" class="page-section">
+                <h1>Bạt Lót Ao Hồ Nuôi Tôm</h1>
+                <p>Trong bối cảnh ngành nuôi trồng thủy sản đang phát triển mạnh mẽ, bạt lót ao, hồ nuôi tôm đã và đang trở thành một trong những giải pháp công nghệ hàng đầu, giúp tối ưu hóa hiệu quả sản xuất, giảm thiểu rủi ro và bảo vệ môi trường. Với những ưu điểm vượt trội về độ bền, khả năng chống thấm và tính ứng dụng linh hoạt, bạt lót ao nuôi tôm là giải pháp tối ưu cho các mô hình nuôi thâm canh, quảng canh và sinh thái.</p>
+                
+                <h3>Vì Sao Bạt Lót Ao, Hồ Nuôi Tôm Là Giải Pháp Tối Ưu?</h3>
+                <ul>
+                    <li><strong>1. Chống thấm tuyệt đối, duy trì chất lượng nước:</strong> Ngăn chặn sự thẩm thấu ngược của phèn, bảo vệ nguồn nước trong ao ổn định.</li>
+                    <li><strong>2. Ngăn chặn dịch bệnh, tăng tỷ lệ sống cho tôm:</strong> Tránh các mầm bệnh và vi khuẩn lưu trú từ đất nền đáy ao tiếp xúc với tôm nuôi.</li>
+                    <li><strong>3. Độ bền vượt trội, tiết kiệm chi phí:</strong> Kháng tia UV, chịu hóa chất tốt, tuổi thọ vận hành từ 10 - 15 năm.</li>
+                    <li><strong>4. Thi công linh hoạt:</strong> Dễ cắt hàn nhiệt tại công trình phù hợp mọi quy mô diện tích lớn nhỏ.</li>
+                </ul>
+                <p style="font-weight: bold;">Gọi ngay hotline: 0344 668 334 để được tư vấn miễn phí dòng bạt nuôi tôm chuyên dụng!</p>
+            </div>
+
+            <div id="bat-mai-nha" class="page-section">
+                <h1>Bạt Chống Thấm Mái Nhà</h1>
+                <p>Khi mùa mưa đến, việc bảo vệ mái nhà khỏi nước mưa là điều cực kỳ quan trọng. Một trong những giải pháp hiệu quả và được ưa chuộng hiện nay là sử dụng Bạt Chống Thấm Mái Nhà. Sản phẩm này không chỉ giúp chống thấm nước mà còn mang lại sự bền bỉ và an toàn cho ngôi nhà của bạn trong suốt các mùa mưa bão.</p>
+                <p>Bạt Chống Thấm Mái Nhà sử dụng chất liệu HDPE (High-Density Polyethylene), một loại nhựa tổng hợp có khả năng chống thấm, chống chịu lực tốt và bền bỉ với thời gian. Bạt HDPE có đặc tính dẻo dai, không bị ảnh hưởng bởi bức xạ mặt trời gay gắt.</p>
+                
+                <h3>Ưu điểm nổi bật của bạt mái nhà:</h3>
+                <ul>
+                    <li>Ngăn nước mưa thấm sâu vào cấu trúc tường, mái bê tông gây nứt vỡ, rêu mốc.</li>
+                    <li>Bền bỉ dài lâu, chịu nhiệt cao mà không mục nát.</li>
+                    <li>Dễ dàng căng kéo, thi công cố định nhanh chóng.</li>
+                </ul>
+                <p>Liên hệ hotline: 0344 668 334 để nhận tư vấn giải pháp thi công dột mái nhà triệt để.</p>
+            </div>
+
+            <div id="bat-chua-nuoc" class="page-section">
+                <h1>Bạt Lót Ao Hồ Chứa Nước</h1>
+                <p>Màng chống thấm HDPE phục vụ lót hồ chứa nước ngọt tưới tiêu nông nghiệp tại các khu vực đồi cao, các vùng khan hiếm nước hoặc tích trữ nước sạch phòng chống xâm nhập mặn tại miền Tây.</p>
+                
+                <h3>Đặc điểm kỹ thuật chính</h3>
+                <ul>
+                    <li>Hạt nhựa nguyên sinh giúp màng bạt dẻo dai, co giãn tốt theo địa hình lòng hồ đào.</li>
+                    <li>Kháng sương muối, trơ lì dưới ánh nắng mặt trời chiếu trực tiếp.</li>
+                    <li>Giữ nguồn nước trong vắt, không hao hụt, rò rỉ xuống lòng đất.</li>
+                </ul>
+                <p>Đầy đủ độ dày cung cấp từ loại mỏng kinh tế 0.3mm đến siêu dày bền bỉ 1mm và 2mm. Thi công nhanh, bàn giao gọn gàng toàn quốc.</p>
+            </div>
+
+            <div id="bat-san-thuong" class="page-section">
+                <h1>Bạt Chống Thấm Sân Thượng</h1>
+                <p>Sân thượng chung cư, nhà phố thường là nơi dễ bị ngấm nước mưa nhất, gây ố vàng trần thạch cao phòng khách bên dưới. Phương án trải màng bạt chống thấm HDPE trước khi cán lớp vữa bảo vệ và lát gạch là phương án triệt để, hiệu quả và có giá thành tiết kiệm hàng đầu.</p>
+                
+                <h3>Ứng dụng kết hợp làm vườn rau sạch trên cao</h3>
+                <p>Nhờ đặc tính an toàn sinh học và kín nước hoàn toàn, bạt HDPE cực kỳ thích hợp làm lớp lót đáy bể nổi để trồng rau sạch, trồng hoa, cây cảnh trực tiếp trên bề mặt sân thượng tòa nhà mà không sợ ngấm ẩm phá hủy kết cấu bê tông.</p>
+            </div>
+
+            <div id="bat-biogas" class="page-section">
+                <h1>Bạt Phủ Hầm Biogas</h1>
+                <p>Bạt Biogas là sản phẩm công nghệ cao, được thiết kế đặc biệt để ứng dụng trong các hệ thống khí sinh học (Biogas). Với khả năng chứa khí methane hiệu quả, độ bền vượt trội và tính linh hoạt trong thi công, bạt Biogas đang trở thành lựa chọn hàng đầu cho các trang trại chăn nuôi, nhà máy xử lý chất thải và các dự án năng lượng tái tạo.</p>
+                
+                <h3>Đặc Điểm Nổi Bật Của Bạt Biogas</h3>
+                <ol>
+                    <li><strong>Chất liệu HDPE cao cấp:</strong> Được sản xuất từ nhựa HDPE nguyên sinh, có độ bền cơ học cao, khả năng chống chịu tia UV, hóa chất ăn mòn mạnh từ chất thải động vật.</li>
+                    <li><strong>Khả năng chứa khí methane hiệu quả:</strong> Thiết kế kín khí tuyệt đối để chứa và bảo quản lượng khí methane sinh ra, hỗ trợ tái tạo nguồn chất đốt, điện năng năng lượng sạch cho trang trại.</li>
+                    <li><strong>Độ dày đa dạng:</strong> Thường dùng màng có độ dày lớn từ 0.75mm, 1.0mm đến 2.0mm để đảm bảo áp suất chịu tải khí lớn.</li>
+                </ol>
+                <p>• Thường xuyên kiểm tra bề mặt bạt để đảm bảo hiệu suất kín khí tối đa. Sử dụng các phụ kiện như dây neo, keo dán chuyên dụng của hãng để tăng tuổi thọ công trình lên tới 15 - 20 năm.</p>
+                <p style="font-weight: bold; color: var(--accent-color);">Hotline kỹ thuật công trình Biogas: 0344 668 334</p>
+            </div>
+
+            <div id="phu-kien-bat" class="page-section">
+                <h1>Phụ Kiện Màng - Bạt HDPE</h1>
+                <p>Đồng hành cùng các công trình thi công hàn trải màng bạt chống thấm, Hưng Thịnh Eco cung cấp đầy đủ các dòng phụ kiện lắp đặt chính hãng chuyên dụng dưới đây:</p>
+                
+                <div class="accessory-item" style="border: 1px solid #ddd; padding: 15px; margin: 15px 0; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <strong style="font-size: 16px; color: var(--primary-color);">Băng keo dán bạt, vá bạt HDPE chuyên dụng</strong>
+                        <p style="margin: 5px 0 0; font-size: 14px; color: #666;">Xử lý nhanh các lỗ rách thủng do vật sắc nhọn hoặc dán nối mép màng diện tích nhỏ không cần dùng máy hàn.</p>
                     </div>
+                    <div style="color: red; font-weight: bold; font-size: 18px;">18.000 ₫ – 150.000 ₫</div>
                 </div>
 
-                <h2 class="section-title"><i class="fa-solid fa-circle-info"></i> Sơ lược về bạt HDPE – Độ bền trên 10 năm</h2>
-                <p class="text-block">
-                    Bạt HDPE là loại màng nhựa được sản xuất từ nguyên liệu High-Density Polyethylene (HDPE) – một loại nhựa nhiệt dẻo có độ bền cơ học cao, khả năng chống thấm nước tuyệt đối và kháng hóa chất tốt. Với cấu trúc đặc biệt, màng HDPE có khả năng ngăn chặn sự thẩm thấu của nước và các chất lỏng khác, bảo vệ công trình một cách hiệu quả và lâu dài dưới tác động khắc nghiệt của môi trường.
-                </p>
-
-                <div class="price-section">
-                    <div class="price-header">
-                        <div>
-                            <div class="price-title-text">Bảng Giá Màng HDPE Chính Hãng</div>
-                            <div class="price-sub-text">Đơn vị tính: m² — Đơn giá tham khảo tại xưởng (VND/m²)</div>
-                        </div>
-                        <div>
-                            <span class="tag-status">Miễn phí tư vấn</span>
-                            <span class="tag-status" style="margin-left: 4px;">Nhận hàn ghép theo yêu cầu</span>
-                        </div>
+                <div class="accessory-item" style="border: 1px solid #ddd; padding: 15px; margin: 15px 0; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <strong style="font-size: 16px; color: var(--primary-color);">Bích xả đáy – mặt bích kép lắp cho màng bạt HDPE</strong>
+                        <p style="margin: 5px 0 0; font-size: 14px; color: #666;">Phụ kiện siết khóa cổ ống xả xuyên qua màng bạt dưới đáy hồ nuôi chống rò rỉ nước triệt để.</p>
                     </div>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>STT</th>
-                                <th>Quy cách màng HDPE</th>
-                                <th>ĐVT</th>
-                                <th>Độ dày</th>
-                                <th>Đơn giá (VND/m²)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>1</td><td>Khổ 3/4/5/6 dài 50 hoặc 100</td><td>m²</td><td>0.30 mm</td><td>11.000</td></tr>
-                            <tr><td>2</td><td>Khổ 4/5/6 dài 50 hoặc 100</td><td>m²</td><td>0.50 mm</td><td>17.000</td></tr>
-                            <tr><td>3</td><td>Khổ 4m × 50m (D × R)</td><td>m²</td><td>0.75 mm</td><td>29.000</td></tr>
-                            <tr><td>4</td><td>Khổ 4m × 50m (D × R)</td><td>m²</td><td>1.00 mm</td><td>37.000</td></tr>
-                            <tr><td>5</td><td>Khổ 4m × 50m (D × R)</td><td>m²</td><td>1.50 mm</td><td>65.000</td></tr>
-                        </tbody>
-                    </table>
-                    <p class="note-text">* Giá có thể thay đổi theo thời điểm và số lượng. Vui lòng liên hệ để nhận báo giá tốt nhất.</p>
+                    <div style="color: red; font-weight: bold; font-size: 18px;">170.000 ₫ – 750.000 ₫</div>
                 </div>
+            </div>
 
-                <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Hàn Ghép Bạt HDPE Tại Xưởng & Thi Công Tận Nơi</h2>
-                <p class="text-block">
-                    Công ty Hưng Thịnh Eco chuyên nhận hàn ghép bạt HDPE theo yêu cầu với chất lượng cao và giá thành tốt nhất thị trường. Chúng tôi hỗ trợ hàn ghép trực tiếp tại xưởng để tạo ra những tấm bạt có kích thước lớn, phù hợp với từng mục đích sử dụng như ao nuôi thủy sản, bể chứa nước, bãi chôn lấp chất thải…
-                </p>
-                <p class="text-block">
-                    Tại xưởng, bạt HDPE được hàn ghép sẵn theo kích thước khách hàng mong muốn, ví dụ: 7m × 10m, 15m × 20m, 20m × 30m hoặc các quy cách lớn hơn. Việc hàn trước tại xưởng giúp tiết kiệm thời gian lắp đặt tại công trình, đảm bảo đường hàn kín, chắc chắn và thẩm mỹ. Đối với các đơn hàng lớn từ 1.000m² trở lên, đội ngũ kỹ thuật của chúng tôi sẵn sàng thi công hàn bạt trực tiếp bằng máy hàn chuyên dụng tại công trình trên toàn quốc.
-                </p>
+        </main>
 
-                <h2 class="section-title"><i class="fa-solid fa-fish"></i> 1. Bạt Lót Ao Hồ Nuôi Cá & Nuôi Tôm</h2>
-                <p class="text-block">
-                    Trong ngành nuôi trồng thủy sản công nghiệp hiện đại, bạt lót ao hồ HDPE đã trở thành giải pháp công nghệ hàng đầu giúp tối ưu hóa sản xuất, kiểm soát rủi ro dịch bệnh và bảo vệ môi trường ổn định.
-                </p>
-                <div class="sub-section-title">Ưu điểm vượt trội cho ao tôm và ao cá:</div>
-                <ul class="list-style">
-                    <li><strong>Ngăn ngừa dịch bệnh:</strong> Cách ly hoàn toàn nước ao nuôi với mầm bệnh, vi khuẩn có hại bám trong đất bờ ao.</li>
-                    <li><strong>Ổn định môi trường nước:</strong> Ngăn chặn hiện tượng xói mòn bờ ao, giữ lượng oxy ổn định, dễ dàng kiểm soát độ pH và độ mặn.</li>
-                    <li><strong>Thu hoạch nhanh chóng:</strong> Bề mặt bạt trơn láng giúp việc thu hoạch nhanh hơn, hạn chế tổn thương cho tôm cá và rút ngắn thời gian làm vệ sinh phơi ao giữa các vụ nuôi.</li>
-                </ul>
-
-                <h2 class="section-title"><i class="fa-solid fa-box"></i> 2. Mô Hình Bể Bạt HDPE Nuôi Thủy Sản Di Động</h2>
-                <p class="text-block">
-                    <strong>Bể bạt HDPE</strong> (độ dày thông dụng 0.5mm) là giải pháp linh hoạt và cực kỳ tiết kiệm thay thế cho các hệ thống bể xi măng truyền thống nặng nề, tốn kém. Mô hình này rất được ưa chuộng để nuôi cá, nuôi lươn, ếch, ba ba, cua hoặc trồng rau thủy canh tuần hoàn (mô hình VAC).
-                </p>
-                <ul class="list-style">
-                    <li><strong>Cấu tạo vững chắc:</strong> Gồm phần lòng bể bằng màng HDPE 0.5mm nguyên sinh bọc quanh khung chịu lực làm từ lưới thép mạ kẽm hoặc khung sắt/inox kiên cố.</li>
-                    <li><strong>Dễ di chuyển:</strong> Kết cấu mô-đun lắp ghép nhanh chóng trong 1 - 2 ngày, thuận tiện tháo dỡ hoặc di dời vị trí chăn nuôi khi cần thiết.</li>
-                    <li><strong>Tiết kiệm:</strong> Chi phí đầu tư vật tư ban đầu thấp hơn rất nhiều so với xây gạch bê tông mà vẫn đảm bảo tuổi thọ bền bỉ trên 10 năm.</li>
-                </ul>
-
-                <h2 class="section-title"><i class="fa-solid fa-house-shield"></i> 3. Bạt Chống Thấm Mái Nhà & Sân Thượng</h2>
-                <p class="text-block">
-                    Khi mùa mưa đến, hiện tượng thấm dột trần nhà, nứt sàn bê tông sân thượng luôn gây đau đầu cho các chủ công trình. Màng HDPE độ dày từ 0.3mm đến 0.75mm là khắc tinh triệt để của sự thấm ẩm.
-                </p>
-                <ul class="list-style">
-                    <li><strong>Chống dột trần và mái:</strong> Trải lót dưới lớp ngói hoặc tôn giúp ngăn chặn triệt để nước mưa thẩm thấu sâu vào cấu trúc tường.</li>
-                    <li><strong>Chống thấm sân thượng lộ thiên:</strong> Lớp màng HDPE dẻo dai chịu được các vết nứt chân chim của bê tông khi nhiệt độ thay đổi, bảo vệ tuyệt đối trần nhà bên dưới không bị ẩm mốc, ố vàng.</li>
-                </ul>
-
-                <h2 class="section-title"><i class="fa-solid fa-droplet"></i> 4. Bạt Lót Ao Hồ Chứa Nước & Tưới Tiêu Nông Nghiệp</h2>
-                <p class="text-block">
-                    Tại các vùng đất cát, khô hạn hoặc vùng trồng cây ăn trái giá trị cao (như sầu riêng, bơ, thanh long), việc đắp hồ chứa nước giữ ẩm là sống còn. Bạt lót hồ chứa nước HDPE giúp giữ trọn vẹn từng giọt nước quý giá.
-                </p>
-                <ul class="list-style">
-                    <li><strong>Chống thất thoát nước:</strong> Ngăn chặn hoàn toàn hiện tượng nước thấm rút vào lòng đất cát, đảm bảo lượng nước tưới dự trữ đầy đủ trong mùa khô hạn.</li>
-                    <li><strong>Lót kênh dẫn nước:</strong> Giúp dòng chảy thông suốt, không bị sạt lở bờ kênh, tiết kiệm chi phí bơm xả.</li>
-                </ul>
-
-                <h2 class="section-title"><i class="fa-solid fa-biohazard"></i> 5. Ứng Dụng Khép Kín Trong Hệ Thống Bạt Biogas</h2>
-                <p class="text-block">
-                    Đối với các trang trại chăn nuôi gia súc quy mô lớn, màng HDPE độ dày lớn (từ 1.0mm - 2.0mm) là vật liệu bắt buộc để phủ kín các hồ chứa chất thải, tạo ra **hệ thống hầm Biogas sinh học** thu hồi khí độc hại.
-                </p>
-                <ul class="list-style">
-                    <li><strong>Chứa khí Methane hiệu quả:</strong> Kháng tia UV cực cao, giữ kín lượng khí sinh học thu được để phục vụ đun nấu hoặc chạy máy phát điện.</li>
-                    <li><strong>Bảo vệ môi trường:</strong> Ngăn mùi hôi thối phát tán ra khu dân cư, ngăn chất thải lỏng ngấm xuống mạch nước ngầm xung quanh.</li>
-                </ul>
-
-                <h2 class="section-title"><i class="fa-solid fa-toolbox"></i> 6. Phụ Kiện Chuyên Dụng Cho Màng Bạt HDPE</h2>
-                <p class="text-block">
-                    Để công trình thi công bạt HDPE hoàn hảo, không thể thiếu các phụ kiện lắp đặt và xử lý sự cố đi kèm:
-                </p>
-                <ul class="list-style">
-                    <li><strong>Băng keo dán bạt, vá bạt HDPE chuyên dụng:</strong> Độ bám dính siêu cường, chịu nước tuyệt đối. Thích hợp để xử lý nhanh các vết rách, thủng đột xuất trong quá trình sử dụng (Mức giá dao động từ 18.000 ₫ – 150.000 ₫).</li>
-                    <li><strong>Mặt bích xả đáy (Bích kép):</strong> Phụ kiện kết nối ống thoát nước xuyên qua màng bạt HDPE, đảm bảo ép chặt không bị rò rỉ nước ở đáy ao hay lòng bể bạt (Mức giá từ 170.000 ₫ – 750.000 ₫).</li>
-                </ul>
-
-                <h2 class="section-title"><i class="fa-solid fa-boxes-stacked"></i> Danh Mục Sản Phẩm Đang Cung Cấp</h2>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <img src="product1.jpg" alt="Băng keo dán bạt" onerror="this.src='https://placehold.co/200x140/eee/333?text=Băng+Keo+Vá+Bạt'">
-                        <div class="product-name">Băng keo dán bạt, vá bạt HDPE</div>
-                        <div class="product-price">18.000 ₫ – 150.000 ₫</div>
-                    </div>
-                    <div class="product-card">
-                        <img src="product2.jpg" alt="Bạt HDPE 0.3 mm" onerror="this.src='https://placehold.co/200x140/eee/333?text=HDPE+0.3mm'">
-                        <div class="product-name">Bạt HDPE 0.3 mm Nguyên Cuộn</div>
-                        <div class="product-price">Giá: Liên hệ Hotline</div>
-                    </div>
-                    <div class="product-card">
-                        <img src="product3.jpg" alt="Bạt HDPE 0.5 mm" onerror="this.src='https://placehold.co/200x140/eee/333?text=HDPE+0.5mm'">
-                        <div class="product-name">Bạt HDPE 0.5 mm Chất Lượng Cao</div>
-                        <div class="product-price">Giá: Liên hệ Hotline</div>
-                    </div>
-                    <div class="product-card">
-                        <img src="product4.jpg" alt="Bạt HDPE 0.75 mm" onerror="this.src='https://placehold.co/200x140/eee/333?text=HDPE+0.75mm'">
-                        <div class="product-name">Bạt HDPE 0.75 mm Chống Thấm</div>
-                        <div class="product-price">Giá: Liên hệ Hotline</div>
-                    </div>
-                    <div class="product-card">
-                        <img src="product5.jpg" alt="Bạt HDPE 1 mm" onerror="this.src='https://placehold.co/200x140/eee/333?text=HDPE+1mm'">
-                        <div class="product-name">Bạt HDPE 1 mm Công Trình Thủy Lợi</div>
-                        <div class="product-price">Giá: Liên hệ Hotline</div>
-                    </div>
-                    <div class="product-card">
-                        <img src="product6.jpg" alt="Bạt HDPE 2 mm" onerror="this.src='https://placehold.co/200x140/eee/333?text=HDPE+2mm'">
-                        <div class="product-name">Bạt HDPE 2 mm Độ Bền Cao</div>
-                        <div class="product-price">Giá: Liên hệ Hotline</div>
-                    </div>
-                    <div class="product-card">
-                        <img src="product7.jpg" alt="Bể bạt HDPE" onerror="this.src='https://placehold.co/200x140/eee/333?text=Bể+Bạt+HDPE'">
-                        <div class="product-name">Bể Bạt HDPE 0.5mm Nuôi Cá, Nuôi Tôm, Nuôi Ốc</div>
-                        <div class="product-price">180.000 ₫ – 1.620.000 ₫</div>
-                    </div>
-                    <div class="product-card">
-                        <img src="product8.jpg" alt="Mặt bích kép" onerror="this.src='https://placehold.co/200x140/eee/333?text=Mặt+Bích+Xả+Đáy'">
-                        <div class="product-name">Bích xả đáy – mặt bích kép lắp cho màng bạt HDPE</div>
-                        <div class="product-price">170.000 ₫ – 750.000 ₫</div>
-                    </div>
+        <sidebar>
+            <div class="widget">
+                <div class="widget-title">Tư vấn mua hàng</div>
+                <div class="hotline-box">
+                    <p>Liên hệ tư vấn mua hàng</p>
+                    <a href="tel:0366511380" class="hotline-number">0366 511 380</a>
                 </div>
-
-                <div class="related-box">
-                    <div class="related-title">Bài viết liên quan</div>
-                    <div class="related-item">
-                        <a href="#">» Bạt HDPE giá bao nhiêu? Những yếu tố quyết định giá thành sản phẩm</a>
-                    </div>
-                    <div class="related-item">
-                        <a href="#">» Xu hướng sử dụng bạt HDPE mới nhất và những cải tiến đáng chú ý trong nông nghiệp</a>
-                    </div>
+                <div class="hotline-box" style="background: #f1f8e9; border-color: var(--primary-color);">
+                    <p>Kỹ thuật & Dự án</p>
+                    <a href="tel:0344668334" class="hotline-number" style="color: var(--primary-color);">0344 668 334</a>
                 </div>
-            </main>
+            </div>
 
-            <aside class="right-sidebar">
-                <div class="sidebar-sticky">
-                    
-                    <div class="box-sidebar">
-                        <div class="box-title-sb">Chúng tôi sẵn sàng tư vấn</div>
-                        <div class="avatar-holder">
-                            <i class="fa-solid fa-headset"></i>
-                        </div>
-                        <p style="font-size:13px; color:#555;">Để được hỗ trợ tốt nhất, hãy gọi ngay</p>
-                        <a href="tel:+84334928686" class="phone-display">+84.334928686</a>
-                        <p style="font-size:12px; color:#999; margin:4px 0;">Hoặc</p>
-                        <p style="font-size:13px; font-weight:bold; color:#333; margin-bottom:10px;">Chat hỗ trợ trực tuyến</p>
-                        
-                        <div class="chat-row">
-                            <a href="https://zalo.me/0334928686" target="_blank" class="btn-chat-link" title="Zalo">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_Zalo.svg" alt="Zalo">
-                            </a>
-                            <a href="https://www.facebook.com/share/18j6rAGFuR/" target="_blank" class="btn-chat-link" title="Messenger">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-                            </a>
-                        </div>
-                    </div>
+            <div class="widget">
+                <div class="widget-title">Cam kết dịch vụ</div>
+                <ul class="policy-list">
+                    <li>Chất lượng cao, nhà cung cấp uy tín</li>
+                    <li>Giá cả luôn cạnh tranh nhất thị trường</li>
+                    <li>Giao hàng nhanh, tận tình, chu đáo</li>
+                    <li>Tư vấn 24/7 mọi thắc mắc từ khách hàng</li>
+                </ul>
+            </div>
+        </sidebar>
 
-                    <div class="form-sb-box">
-                        <h3>YÊU CẦU BÁO GIÁ</h3>
-                        <form action="#" method="POST" onsubmit="alert('Hệ thống Hưng Thịnh Eco đã ghi nhận thành công nhu cầu của bạn. Đội ngũ tư vấn viên sẽ gọi lại trực tiếp báo giá qua số điện thoại này trong ít phút!'); this.reset(); return false;">
-                            <div class="input-group">
-                                <input type="text" class="input-control" placeholder="Họ tên của bạn" required>
-                            </div>
-                            <div class="input-group">
-                                <input type="tel" class="input-control" placeholder="Số điện thoại" required pattern="[0-9]{9,11}">
-                            </div>
-                            <div class="input-group">
-                                <textarea class="textarea-control" placeholder="Mô tả cụ thể nhu cầu của bạn (Ví dụ: Cần mua bạt lót ao cá 0.5mm khổ 4m, bạt lót ao tôm số lượng lớn...)" required></textarea>
-                            </div>
-                            <button type="submit" class="btn-send-form">Gửi Yêu Cầu Ngay</button>
-                        </form>
-                    </div>
-
-                    <ul class="commit-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Chất lượng cao, nhà cung cấp uy tín</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Giá cả luôn cạnh tranh nhất thị trường</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Giao hàng nhanh, tận tình, chu đáo</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Tư vấn 24/7 thắc mắc từ khách hàng</li>
-                    </ul>
-
-                </div>
-            </aside>
-
-        </div>
     </div>
 
-    <section class="footer-details">
-        <div class="container">
+    <div class="floating-buttons">
+        <a href="tel:0366511380" class="float-btn btn-call">📞 Gọi Ngay</a>
+        <a href="#" class="float-btn btn-zalo">💬 Chat Zalo</a>
+        <a href="#" class="float-btn btn-messenger">✉ Messenger</a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
             <div class="footer-col">
-                <div class="company-title-ft">Công ty TNHH Hưng Thịnh</div>
-                <div class="info-txt-ft"><strong>Địa chỉ miền bắc:</strong> Khu Phố Cao Xá, Sơn Nam, Hưng Yên.</div>
-                <div class="info-txt-ft"><strong>Địa chỉ miền nam:</strong> KCN Hải Sơn, Đức Hòa, Long An.</div>
-                <div class="info-txt-ft"><strong>Điện thoại liên hệ:</strong> +84.334928686</div>
-                <div class="info-txt-ft"><strong>Email:</strong> hungthinh.ecohy@gmail.com</div>
+                <h4>Về chúng tôi</h4>
+                <p style="color: #aaa; font-size: 13px;">Công ty TNHH Hưng Thịnh Eco tự hào là đơn vị phân phối và thi công các giải pháp màng chống thấm HDPE uy tín chất lượng cao hàng đầu khu vực.</p>
             </div>
             <div class="footer-col">
                 <h4>Hỗ trợ khách hàng</h4>
                 <ul>
-                    <li><a href="#">Chính sách vận chuyển</a></li>
-                    <li><a href="#">Chính sách thanh toán</a></li>
-                    <li><a href="#">Chính sách đổi trả hàng</a></li>
-                    <li><a href="#">Chính sách bảo mật thông tin</a></li>
+                    <li><a onclick="showPage('home', 'Trang chủ » Bạt HDPE - Màng chống thấm HDPE')">Chính sách vận chuyển</a></li>
+                    <li><a onclick="showPage('home', 'Trang chủ » Bạt HDPE - Màng chống thấm HDPE')">Chính sách thanh toán</a></li>
+                    <li><a onclick="showPage('home', 'Trang chủ » Bạt HDPE - Màng chống thấm HDPE')">Chính sách đổi trả hàng</a></li>
+                    <li><a onclick="showPage('home', 'Trang chủ » Bạt HDPE - Màng chống thấm HDPE')">Chính sách bảo mật</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Theo dõi chúng tôi</h4>
-                <p class="info-txt-ft" style="margin-bottom:12px;">Kết nối với Hưng Thịnh Eco để nhận các thông tin ưu đãi mới nhất về vật tư nông nghiệp và màng bạt HDPE nuôi thủy sản.</p>
-                <div class="chat-row" style="justify-content: flex-start;">
-                    <a href="https://www.facebook.com/share/18j6rAGFuR/" target="_blank" class="btn-chat-link"><i class="fa-brands fa-facebook-f" style="color:#1877F2;"></i></a>
-                    <a href="https://zalo.me/0334928686" target="_blank" class="btn-chat-link"><i class="fa-solid fa-comment" style="color:#0084FF;"></i></a>
-                </div>
+                <h4>Liên hệ</h4>
+                <p style="color: #aaa; font-size: 13px;">Địa chỉ miền Bắc: Khu Đô Thị Phố Hiến, Thành phố Hưng Yên.<br>Hotline: 0366 511 380</p>
             </div>
         </div>
-    </section>
-
-    <div class="bottom-copyright">
-        <div class="container">
-            &copy; 2026 Công ty TNHH Hưng Thịnh. All Rights Reserved. Hệ thống phân phối chính thức trên <a href="https://batthuysan-yohu.online" style="color:#fff; text-decoration:underline;">batthuysan-yohu.online</a>
+        <div class="footer-bottom">
+            <p>© 2026 Hưng Thịnh Eco. All rights reserved.</p>
         </div>
+    </footer>
+
+    <script>
+        function showPage(pageId, breadcrumbText) {
+            // Ẩn tất cả các Section nội dung trang con
+            var sections = document.querySelectorAll('.page-section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            
+            // Hiển thị Section trang được người dùng click chọn
+            var targetSection = document.getElementById(pageId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+            
+            // Cập nhật lại chuỗi chữ Breadcrumb động phía dưới menu cho khớp cấu trúc thư mục mẫu
+            document.getElementById('breadcrumb-text').innerText = breadcrumbText;
+            
+            // Tự động cuộn trang lên đầu mượt mà sau khi chuyển đổi nội dung
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HƯNG THỊNH ECO - Bạt HDPE - Màng chống thấm HDPE</title>
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --accent-color: #f57c00;
+            --text-color: #333;
+            --bg-light: #f5f5f5;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { color: var(--text-color); line-height: 1.6; background: #fff; }
+        
+        /* HEADER & NAVIGATION */
+        header { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo-box { cursor: pointer; }
+        .logo-box h2 { color: var(--primary-color); font-size: 22px; letter-spacing: 1px; line-height: 1.2; }
+        .logo-box p { font-size: 11px; color: #666; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+        
+        nav { display: flex; gap: 20px; }
+        .nav-item { position: relative; padding: 10px 0; }
+        .nav-item > a { text-decoration: none; color: #333; font-weight: bold; font-size: 15px; transition: 0.3s; cursor: pointer; }
+        .nav-item:hover > a { color: var(--primary-color); }
+        
+        /* DROPDOWN MENU */
+        .dropdown { position: absolute; top: 100%; left: 0; background: #fff; min-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); border-top: 3px solid var(--primary-color); display: none; }
+        .dropdown a { display: block; padding: 12px 20px; text-decoration: none; color: #333; font-size: 14px; border-bottom: 1px solid #eee; transition: 0.2s; cursor: pointer; }
+        .dropdown a:hover { background: #f9f9f9; color: var(--accent-color); padding-left: 25px; }
+        .nav-item:hover .dropdown { display: block; }
+
+        /* BREADCRUMB */
+        .breadcrumb { background: #f1f8e9; padding: 12px 20px; font-size: 14px; color: #555; border-bottom: 1px solid #e0e0e0; }
+        .breadcrumb a { color: var(--primary-color); text-decoration: none; font-weight: bold; cursor: pointer; }
+
+        /* MAIN LAYOUT */
+        .main-container { max-width: 1200px; margin: 20px auto; display: grid; grid-template-columns: 1fr 320px; gap: 30px; padding: 0 20px; }
+        .page-section { display: none; background: #fff; }
+        .page-section.active { display: block; }
+        
+        /* TYPOGRAPHY & BLOCKS */
+        h1 { color: #222; font-size: 28px; margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 15px; }
+        h3 { color: var(--primary-color); margin: 25px 0 12px; font-size: 18px; position: relative; padding-left: 12px; }
+        h3::before { content: "■"; color: var(--accent-color); position: absolute; left: 0; font-size: 14px; top: 1px; }
+        p { margin-bottom: 15px; text-align: justify; color: #444; }
+        ul, ol { padding-left: 20px; margin-bottom: 20px; }
+        ul li, ol li { margin-bottom: 8px; color: #444; }
+        strong { color: #222; }
+        
+        /* TABLES */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 15px; }
+        table, th, td { border: 1px solid #ddd; }
+        th, td { padding: 12px; text-align: left; }
+        th { background-color: #f5f5f5; color: #333; font-weight: bold; }
+        tr:nth-child(even) { background-color: #fafafa; }
+        
+        /* PRICE TAGS */
+        .price-highlight { font-size: 24px; color: #d32f2f; font-weight: bold; margin: 15px 0; }
+        .old-price { text-decoration: line-through; color: #888; font-size: 16px; margin-right: 10px; font-weight: normal; }
+        
+        /* SIDEBAR */
+        sidebar { background: #fff; }
+        .widget { border: 1px solid #e0e0e0; padding: 20px; margin-bottom: 25px; border-radius: 4px; }
+        .widget-title { font-size: 16px; font-weight: bold; color: var(--primary-color); margin-bottom: 15px; border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; text-transform: uppercase; }
+        .hotline-box { background: #fff3e0; border: 1px dashed var(--accent-color); padding: 15px; text-align: center; border-radius: 4px; margin-bottom: 15px; }
+        .hotline-box p { text-align: center; margin-bottom: 5px; font-weight: bold; color: #333; }
+        .hotline-number { font-size: 20px; color: #e65100; font-weight: bold; display: block; text-decoration: none; }
+        
+        .policy-list { list-style: none; padding-left: 0; }
+        .policy-list li { padding: 8px 0; border-bottom: 1px dashed #eee; font-size: 14px; display: flex; align-items: center; gap: 8px; color: #444; }
+        .policy-list li::before { content: "✓"; color: var(--primary-color); font-weight: bold; }
+        
+        /* FLOATING UTILITIES BUTTONS */
+        .floating-buttons { position: fixed; bottom: 20px; left: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 9999; }
+        .float-btn { display: flex; align-items: center; gap: 8px; padding: 12px 18px; color: #fff; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); text-transform: uppercase; }
+        .btn-zalo { background: #0068ff; }
+        .btn-messenger { background: #0084ff; }
+        .btn-call { background: #d32f2f; }
+
+        /* FOOTER */
+        footer { background: #222; color: #ccc; padding: 40px 20px; margin-top: 60px; font-size: 14px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-col h4 { color: #fff; margin-bottom: 15px; font-size: 16px; text-transform: uppercase; border-bottom: 1px solid #444; padding-bottom: 5px; }
+        .footer-col ul { list-style: none; padding-left: 0; }
+        .footer-col ul li { margin-bottom: 8px; }
+        .footer-col ul li a { color: #ccc; text-decoration: none; cursor: pointer; transition: 0.2s; }
+        .footer-col ul li a:hover { color: #fff; padding-left: 5px; }
+        .footer-bottom { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; color: #888; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-box" onclick="showPage('home', 'Trang chủ » Bạt HDPE - Màng chống thấm HDPE')">
+                <h2>HƯNG THỊNH ECO</h2>
+                <p>Vật tư nông nghiệp</p>
+            </div>
+            <nav>
+                <div class="nav-item"><a onclick="showPage('home', 'Trang chủ » Bạt HDPE - Màng chống thấm HDPE')">Trang chủ</a></div>
+                <div class="nav-item">
+                    <a>Màng Chống Thấm HDPE ▼</a>
+                    <div class="dropdown">
+                        <a onclick="showPage('bat-nuoi-ca', 'Trang chủ » Bạt HDPE » Bạt Lót Ao Hồ Nuôi Cá')">Bạt Lót Ao Hồ Nuôi Cá</a>
+                        <a onclick="showPage('be-bat-hdpe', 'Trang chủ » Bạt HDPE » Bể Bạt HDPE')">Bể Bạt HDPE Lắp Sẵn</a>
+                        <a onclick="showPage('bat-nuoi-tom', 'Trang chủ » Bạt HDPE » Bạt Lót Ao Hồ Nuôi Tôm')">Bạt Lót Ao Hồ Nuôi Tôm</a>
+                        <a onclick="showPage('bat-mai-nha', 'Trang chủ » Bạt HDPE » Bạt Chống Thấm Mái Nhà')">Bạt Chống Thấm Mái Nhà</a>
+                        <a onclick="showPage('bat-chua-nuoc', 'Trang chủ » Bạt HDPE » Bạt Lót Ao Hồ Chứa Nước')">Bạt Lót Ao Hồ Chứa Nước</a>
+                        <a onclick="showPage('bat-san-thuong', 'Trang chủ » Bạt HDPE » Bạt Chống Thấm Sân Thượng')">Bạt Chống Thấm Sân Thượng</a>
+                        <a onclick="showPage('bat-biogas', 'Trang chủ » Bạt HDPE » Bạt Biogas')">Bạt Phủ Hầm Biogas</a>
+                        <a onclick="showPage('phu-kien-bat', 'Trang chủ » Bạt HDPE » Phụ Kiện Màng - Bạt HDPE')">Phụ Kiện Màng - Bạt HDPE</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb" id="breadcrumb-text">Trang chủ » Bạt HDPE - Màng chống thấm HDPE</div>
+
+    <div class="main-container">
+        
+        <main id="main-content">
+
+            <div id="home" class="page-section active">
+                <h1>Bạt HDPE - Màng chống thấm HDPE</h1>
+                <p>Bạt HDPE, hay còn gọi là màng chống thấm HDPE, là một vật liệu nổi bật trong các công trình xây dựng, nông nghiệp, thủy lợi và xử lý chất thải. Với tính năng chống thấm vượt trội, bạt HDPE đã trở thành lựa chọn hàng đầu cho các dự án đòi hỏi tính năng chống thấm hiệu quả và bền vững.</p>
+                
+                <h3>Sơ lược về bạt HDPE – màng chống thấm HDPE độ bền trên 10 năm</h3>
+                <p>Bạt HDPE là loại màng nhựa được sản xuất từ nguyên liệu High-Density Polyethylene, một loại nhựa nhiệt dẻo có độ bền cơ học cao, khả năng chống thấm nước tuyệt đối và chống chịu hóa chất tốt. Với cấu trúc đặc biệt, màng HDPE có khả năng ngăn chặn sự thẩm thấu của nước và các chất lỏng khác, bảo vệ công trình một cách hiệu quả.</p>
+                
+                <h3>Bảng Giá Màng HDPE (Đơn vị tính: m² - Đơn giá tham khảo)</h3>
+                <p style="font-style: italic; font-size: 14px; color: #666; margin-bottom: 5px;">Miễn phí tư vấn | Nhận hàn ghép theo yêu cầu</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>QUY CÁCH MÀNG HDPE</th>
+                            <th>ĐVT</th>
+                            <th>ĐỘ DÀY</th>
+                            <th>ĐƠN GIÁ (VND/M²)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Khổ 3/4/5/6 dài theo yêu cầu</td><td>m²</td><td>0.3 mm</td><td>Liên hệ Hotline</td></tr>
+                        <tr><td>2</td><td>Khổ 4/5/6/8 dài theo yêu cầu</td><td>m²</td><td>0.5 mm</td><td>Liên hệ Hotline</td></tr>
+                        <tr><td>3</td><td>Khổ 4/5/6/8 dài theo yêu cầu</td><td>m²</td><td>0.75 mm</td><td>Liên hệ Hotline</td></tr>
+                        <tr><td>4</td><td>Khổ 4/5/6/8 dài theo yêu cầu</td><td>m²</td><td>1 mm</td><td>Liên hệ Hotline</td></tr>
+                        <tr><td>5</td><td>Khổ 4/5/6/8 dài theo yêu cầu</td><td>m²</td><td>2 mm</td><td>Liên hệ Hotline</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Ứng dụng thực tế đa dạng của Bạt HDPE</h3>
+                <ul>
+                    <li>Lót ao hồ nuôi cá nuôi tôm, tạo môi trường sạch bệnh, kiểm soát dịch bệnh.</li>
+                    <li>Chống thấm mái nhà, sàn sân thượng chịu thời tiết khắc nghiệt, chống dột triệt để.</li>
+                    <li>Lót ao hồ chứa nước tưới tiêu, hồ thủy lợi vùng hạn mặn, tích trữ nước ngọt nông nghiệp.</li>
+                    <li>Phủ hầm Biogas cho các trang trại chăn nuôi gia súc quy mô lớn, ngăn mùi và thu khí gas.</li>
+                </ul>
+            </div>
+
+            <div id="bat-nuoi-ca" class="page-section">
+                <h1>Bạt Lót Ao Hồ Nuôi Cá</h1>
+                <p>Sử dụng bạt lót ao hồ nuôi cá chuyên dụng giúp người nuôi kiểm soát hoàn toàn môi trường nước, ngăn ngừa hiện tượng rò rỉ nước và giữ độ pH luôn ổn định, giúp cá sinh trưởng nhanh chóng, khỏe mạnh.</p>
+                <p>Sản phẩm bạt lót hồ cá của Hưng Thịnh Eco có khả năng chống thấm tuyệt đối, cách ly nguồn nước nuôi trong hồ với môi trường đất nhiễm phèn, chua hoặc mạch nước ngầm ô nhiễm bên ngoài, tạo điều kiện lý tưởng cho các mô hình nuôi cá đạt năng suất cực cao.</p>
+                
+                <h3>Thông số và bảng giá bạt nuôi cá tham khảo</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>QUY CÁCH MÀNG HDPE CHUYÊN DỤNG AO CÁ</th>
+                            <th>ĐỘ DÀY MÀNG</th>
+                            <th>ĐƠN GIÁ (VND/M²)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Khổ rộng 3m, 4m, 5m, 6m (Chiều dài cắt theo yêu cầu)</td><td>0.3 mm</td><td>Liên hệ Hotline</td></tr>
+                        <tr><td>Khổ rộng 4m, 5m, 6m, 8m (Chiều dài cắt theo yêu cầu)</td><td>0.5 mm</td><td>Liên hệ Hotline</td></tr>
+                    </tbody>
+                </table>
+                <h3>Lợi ích vượt trội khi sử dụng bạt lót ao cá</h3>
+                <ul>
+                    <li>Cách ly hoàn toàn nước ao với mạch nước ngầm và mầm bệnh tiềm ẩn trong đất nền.</li>
+                    <li>Dễ dàng lắp đặt hệ thống sục khí, dọn dẹp vệ sinh, gom chất thải đáy ao nhanh chóng sau mỗi vụ thu hoạch.</li>
+                    <li>Ngăn chặn tối đa hiện tượng sạt lở bờ ao do mưa bão, dòng chảy hoặc tác động của sóng nước.</li>
+                    <li>Tiết kiệm tối đa chi phí vận hành, bơm cấp nước và thời gian làm sạch ao nuôi chuẩn bị vụ mới.</li>
+                </ul>
+            </div>
+
+            <div id="be-bat-hdpe" class="page-section">
+                <h1>Bể Bạt HDPE Nuôi Cá, Nuôi Tôm, Nuôi Ốc</h1>
+                <div class="price-highlight"><span class="old-price">180.000 ₫</span> 180.000 ₫ – 1.620.000 ₫</div>
+                
+                <h3>Giới thiệu Bể Bạt HDPE</h3>
+                <p>Bể Bạt HDPE là giải pháp tối ưu trong chăn nuôi và nuôi trồng thủy sản, sử dụng chất liệu màng HDPE (High Density Polyethylene) có độ bền cao, kháng tia UV, chịu được hóa chất và thời tiết khắc nghiệt.</p>
+                <p>So với bể xi măng hay bể nhựa truyền thống, bể bạt HDPE có chi phí đầu tư thấp hơn, thi công nhanh chóng, độ bền trên 10 năm và dễ dàng tháo lắp, di chuyển khi cần thiết.</p>
+                
+                <h3>Bể được ứng dụng rộng rãi trong:</h3>
+                <ul>
+                    <li>Nuôi cá, tôm, lươn, ếch, ba ba, cua, ốc nhồi...</li>
+                    <li>Ủ phân hữu cơ, chứa nước sạch sinh hoạt, chứa nước tưới tiêu nông nghiệp.</li>
+                    <li>Trồng rau thủy canh kết hợp, ứng dụng các mô hình hệ sinh thái VAC.</li>
+                </ul>
+
+                <h3>Ưu điểm nổi bật của Bể Bạt HDPE tại Hưng Thịnh Eco</h3>
+                <ul>
+                    <li><strong>Độ bền cao:</strong> Chất liệu HDPE dày từ 0.3mm – 1.5mm, tuổi thọ sử dụng kéo dài trên 10 năm.</li>
+                    <li><strong>Chống thấm tuyệt đối:</strong> Kết cấu kín nước hoàn toàn, kháng muối, kháng phèn và các loại hóa chất thông thường.</li>
+                    <li><strong>Tiết kiệm chi phí:</strong> Giá thành đầu tư rẻ hơn rất nhiều so với việc xây dựng bể xi măng kiên cố.</li>
+                    <li><strong>Thi công nhanh chóng:</strong> Chỉ mất từ 1 – 2 ngày là hoàn thiện lắp dựng hoàn chỉnh hệ thống bể nuôi.</li>
+                    <li><strong>Linh hoạt cao:</strong> Dễ dàng tháo lắp, thu gọn hoặc di chuyển vị trí khi thay đổi quy hoạch trang trại chăn nuôi.</li>
+                    <li><strong>An toàn cho thủy sản:</strong> Chất liệu nhựa nguyên sinh không gây độc hại, thân thiện tuyệt đối với môi trường.</li>
+                </ul>
+
+                <h3>Quy cách & Kích thước Bể Bạt HDPE</h3>
+                <p>Bể bạt HDPE được sản xuất theo mọi kích thước yêu cầu đa dạng của khách hàng với hình tròn hoặc hình chữ nhật, định hình cực kỳ chắc chắn bằng hệ thống khung thép bọc nhựa chống rỉ sét chịu lực va đập cao.</p>
+                <p style="font-style: italic; color: #666;">* Lưu ý: Mức giá có thể thay đổi tùy thuộc vào kích thước cụ thể, độ dày bạt lót và các phụ kiện đi kèm yêu cầu thi công. Vui lòng liên hệ trực tiếp bộ phận bán hàng để nhận tư vấn chi tiết và chính xác nhất.</p>
+                
+                <h3>Tại sao nên chọn mua Bể Bạt HDPE tại HƯNG THỊNH ECO?</h3>
+                <ol>
+                    <li>Sản xuất chính xác theo kích thước yêu cầu của khách hàng, đảm bảo chuẩn kỹ thuật vận hành.</li>
+                    <li>Sử dụng bạt HDPE chính hãng có chứng chỉ an toàn sinh học rõ ràng.</li>
+                    <li>Đội ngũ kỹ thuật thi công giàu kinh nghiệm, chính sách bảo hành dài hạn, uy tín.</li>
+                    <li>Giá thành cạnh tranh tận xưởng sản xuất, chiết khấu sâu cho các đơn hàng số lượng lớn.</li>
+                </ol>
+            </div>
+
+            <div id="bat-nuoi-tom" class="page-section">
+                <h1>Bạt Lót Ao Hồ Nuôi Tôm</h1>
+                <p>Trong bối cảnh ngành nuôi trồng thủy sản đang phát triển mạnh mẽ, bạt lót ao, hồ nuôi tôm đã và đang trở thành một trong những giải pháp công nghệ hàng đầu, giúp tối ưu hóa hiệu quả sản xuất, giảm thiểu rủi ro bệnh dịch và bảo vệ môi trường. Với những ưu điểm vượt trội về độ bền, khả năng chống thấm và tính ứng dụng linh hoạt, bạt lót ao nuôi tôm là giải pháp tối ưu cho các mô hình nuôi thâm canh, quảng canh và sinh thái công nghệ cao.</p>
+                
+                <h3>Tại sao bạt lót ao, hồ nuôi tôm là giải pháp tối ưu?</h3>
+                <ul>
+                    <li><strong>1. Chống thấm tuyệt đối, duy trì chất lượng nước tốt:</strong> Ngăn chặn hoàn toàn sự thẩm thấu ngược của chất phèn, giữ độc tố dưới lòng đất không xì lên ao, bảo vệ nguồn nước trong ao ổn định các chỉ số pH, kiềm.</li>
+                    <li><strong>2. Ngăn chặn dịch bệnh, tăng tỷ lệ sống cho tôm:</strong> Tránh các mầm bệnh, vi khuẩn, nấm lưu trú từ đất nền đáy ao tiếp xúc trực tiếp với tôm nuôi. Giúp tôm lột xác an toàn, hạn chế hao hụt đầu con.</li>
+                    <li><strong>3. Độ bền vượt trội, tiết kiệm chi phí đầu tư dài hạn:</strong> Kháng tia UV cực mạnh, chịu hóa chất xử lý ao tốt, tuổi thọ vận hành liên tục từ 10 - 15 năm dưới thời tiết khắc nghiệt.</li>
+                    <li><strong>4. Thi công linh hoạt và nhanh chóng:</strong> Dễ cắt, hàn nhiệt kết nối ngay tại công trình, phù hợp cho mọi quy mô diện tích ao nuôi từ vài trăm đến hàng ngàn mét vuông.</li>
+                </ul>
+                <p>Sử dụng bạt lót ao hồ nuôi tôm không chỉ giúp tăng năng suất và chất lượng tôm thương phẩm vượt trội mà còn góp phần bảo vệ môi trường sinh thái xung quanh, hướng tới sự phát triển nông nghiệp bền vững.</p>
+                <p style="font-weight: bold; color: var(--primary-color);">Nếu bạn đang tìm kiếm một giải pháp tối ưu cho ao hồ nuôi tôm của mình, hãy gọi ngay hotline: 0344 668 334 để được Hưng Thịnh Eco tư vấn kỹ thuật miễn phí và cung cấp dòng bạt chuyên dụng giá cạnh tranh nhất!</p>
+            </div>
+
+            <div id="bat-mai-nha" class="page-section">
+                <h1>Bạt Chống Thấm Mái Nhà</h1>
+                <p>Khi mùa mưa đến, việc bảo vệ mái nhà khỏi hiện tượng thấm dột nước mưa là điều cực kỳ quan trọng. Một trong những giải pháp hiệu quả, thi công nhanh và được ưa chuộng hàng đầu hiện nay là sử dụng Bạt Chống Thấm Mái Nhà. Sản phẩm này không chỉ giúp ngăn chặn nước thấm dột tuyệt đối mà còn mang lại sự bền bỉ, an toàn tối đa cho kết cấu ngôi nhà của bạn trong suốt các mùa mưa bão dài ngày.</p>
+                <p>Bạt Chống Thấm Mái Nhà do Hưng Thịnh Eco phân phối sử dụng chất liệu màng HDPE (High-Density Polyethylene) nguyên sinh cao cấp, một loại nhựa tổng hợp có khả năng chống thấm tuyệt đối, chống chịu lực kéo đứt tốt và trơ lì với thời gian. Bạt HDPE có đặc tính dẻo dai, không bị rạn nứt hay ảnh hưởng bởi bức xạ mặt trời gay gắt chiếu trực tiếp hàng ngày.</p>
+                
+                <h3>Ưu điểm nổi bật của bạt chống thấm mái nhà</h3>
+                <ul>
+                    <li>Ngăn chặn triệt để nước mưa thấm sâu vào cấu trúc tường, mái bê tông gây nứt vỡ kết cấu, hoen ố trần thạch cao và ẩm mốc độc hại.</li>
+                    <li>Độ bền bỉ dài lâu, chịu nhiệt độ cao ngoài trời liên tục mà không lo mục nát hay giòn gãy.</li>
+                    <li>Dễ dàng căng kéo, cắt gọn và định hình cố định nhanh chóng trên mọi bề mặt mái ngói, mái tôn hay sàn bê tông phẳng.</li>
+                </ul>
+                <h3>Mua Bạt Chống Thấm Mái Nhà Ở Đâu Uy Tín?</h3>
+                <p>Hưng Thịnh Eco cung cấp đầy đủ kích cỡ và độ dày các dòng Bạt Chống Thấm Mái Nhà với chất lượng kiểm định nghiêm ngặt. Đến với chúng tôi, bạn sẽ được đội ngũ kỹ thuật tư vấn tận tình để chọn lựa được phương án xử lý dột tối ưu và tiết kiệm chi phí nhất.</p>
+                <p style="font-weight: bold;">Hãy liên hệ ngay với chúng tôi qua số hotline kỹ thuật: 0344 668 334 để được hỗ trợ khảo sát, chọn lựa sản phẩm và giao hàng nhanh chóng toàn quốc!</p>
+            </div>
+
+            <div id="bat-chua-nuoc" class="page-section">
+                <h1>Bạt Lót Ao Hồ Chứa Nước</h1>
+                <p>Màng chống thấm HDPE phục vụ lót hồ chứa nước ngọt tưới tiêu nông nghiệp tại các khu vực đồi cao, các vùng khan hiếm nước hoang mạc, hoặc tích trữ nước sạch dự phòng chống xâm nhập mặn nghiêm trọng tại các tỉnh miền Tây Nam Bộ.</p>
+                <p>Giải pháp trải bạt lót ao hồ chứa nước giúp giữ trọn vẹn nguồn nước tưới tiêu cho cây ăn quả giá trị cao sầu riêng, thanh long, cà phê... không bị thất thoát, ngăn rò rỉ nước xuống lòng đất, đảm bảo nguồn nước ổn định quanh năm bất kể mùa khô hạn.</p>
+                
+                <h3>Đặc điểm kỹ thuật chính của bạt chứa nước Hưng Thịnh Eco</h3>
+                <ul>
+                    <li>Sử dụng hạt nhựa cao cấp giúp màng bạt đạt độ dẻo dai lớn, co giãn linh hoạt theo địa hình nhấp nhô của lòng hồ đào.</li>
+                    <li>Kháng sương muối, trơ lì tuyệt đối dưới ánh nắng mặt trời chiếu trực tiếp, chịu lực xé rách cao.</li>
+                    <li>Giữ nguồn nước trong vắt, không mùi nhựa độc hại, hoàn toàn đạt chuẩn tưới tiêu và sinh hoạt.</li>
+                </ul>
+                <p>Chúng tôi cung cấp đầy đủ các quy cách độ dày đa dạng: từ các dòng mỏng kinh tế tối ưu chi phí 0.3mm, 0.5mm đến các dòng siêu dày bền bỉ chuyên dụng dự án lớn 0.75mm, 1mm và 2mm. Nhận gia công hàn khổ bạt lớn theo kích thước ao hồ của bạn, bàn giao gọn gàng nhanh chóng.</p>
+            </div>
+
+            <div id="bat-san-thuong" class="page-section">
+                <h1>Bạt Chống Thấm Sân Thượng</h1>
+                <p>Sân thượng nhà phố, nhà cao tầng thường là nơi hứng chịu lượng nước mưa lớn nhất, lâu ngày rất dễ bị nứt sàn, ngấm nước xuống làm hư hại trần nhà thạch cao phòng khách bên dưới. Phương án trải màng bạt chống thấm HDPE trước khi cán lớp vữa bảo vệ và lát gạch hoàn thiện là giải pháp công nghệ triệt để, hiệu quả vĩnh viễn và có giá thành tiết kiệm hàng đầu hiện nay.</p>
+                <p>Màng HDPE chịu được áp lực nước liên tục, không bị thối mục bởi vi khuẩn hay rễ cây tấn công đâm xuyên qua, bảo vệ tuyệt đối lớp bê tông cốt thép của tòa nhà.</p>
+                
+                <h3>Ứng dụng tuyệt vời làm vườn rau sạch trên cao</h3>
+                <p>Nhờ đặc tính an toàn sinh học cao không phát thải chất độc, bạt HDPE cực kỳ thích hợp làm lớp lót đáy bể nổi, bồn chứa đất trồng rau sạch, hoa cảnh trực tiếp trên bề mặt sân thượng. Bạn có thể thoải mái tưới nước làm vườn trên cao mà hoàn toàn yên tâm kết cấu nhà luôn khô ráo, không một vết ngấm ẩm.</p>
+            </div>
+
+            <div id="bat-biogas" class="page-section">
+                <h1>Bạt Phủ Hầm Biogas</h1>
+                <p>Bạt Biogas là sản phẩm công nghệ môi trường cao cấp, được thiết kế đặc biệt để ứng dụng trong các hệ thống xử lý chất thải hữu cơ và sản xuất khí sinh học (Biogas). Với khả năng kín khí, chứa khí methane hiệu quả, độ bền vượt trội và tính linh hoạt cao trong thi công, bạt Biogas đang trở thành lựa chọn hàng đầu cho các trang trại chăn nuôi gia súc lớn, nhà máy chế biến thực phẩm và các dự án năng lượng tái tạo sạch.</p>
+                
+                <h3>Đặc Điểm Nổi Bật Của Bạt Biogas</h3>
+                <ol>
+                    <li><strong>Chất liệu HDPE cao cấp nguyên sinh:</strong> Bạt Biogas được sản xuất từ nhựa HDPE (High-Density Polyethylene) nguyên sinh, có độ bền cơ học cực cao, khả năng chống chịu tia UV của ánh nắng, kháng hóa chất ăn mòn mạnh từ các loại axit, chất thải động vật lưu trú lâu ngày.</li>
+                    <li><strong>Khả năng chứa khí methane hiệu quả tuyệt đối:</strong> Thiết kế độ kín khít tuyệt đối giúp chứa và bảo quản lượng khí methane sinh ra từ quá trình phân hủy chất thải hữu cơ, tận dụng triệt để nguồn khí đốt, chạy máy phát điện năng lượng sạch, mang lại hiệu quả kinh tế lớn.</li>
+                    <li><strong>Độ dày đa dạng chuyên dụng:</strong> Thường dùng màng có độ dày lớn từ 0.75mm, 1.0mm đến 2.0mm nhằm đảm bảo an toàn tuyệt đối trước áp suất khí lớn bên trong hầm phủ.</li>
+                </ol>
+                
+                <h3>Hướng dẫn vận hành và tăng tuổi thọ công trình</h3>
+                <ul>
+                    <li>Luôn tuân thủ quy trình kỹ thuật hàn đùn, hàn kép mép bạt trong quá trình thi công và định hình hầm.</li>
+                    <li>Thường xuyên kiểm tra trực quan và vệ sinh bề mặt bạt phủ để đảm bảo hiệu suất hoạt động, không để vật sắc nhọn rơi vào bề mặt hầm khí.</li>
+                    <li>Sử dụng các phụ kiện đi kèm đồng bộ như dây neo chịu lực, keo dán chuyên dụng để cố định mép màng bạt vào rãnh neo, giúp tăng tuổi thọ công trình lên tới 15 - 20 năm.</li>
+                </ul>
+                <p style="font-weight: bold; color: var(--accent-color);">Hưng Thịnh Eco cam kết cung cấp sản phẩm bạt Biogas chính hãng, hỗ trợ giải pháp kỹ thuật tối ưu. Hotline tư vấn công trình Biogas toàn quốc: 0344 668 334</p>
+            </div>
+
+            <div id="phu-kien-bat" class="page-section">
+                <h1>Phụ Kiện Màng - Bạt HDPE</h1>
+                <p>Đồng hành cùng các công trình thi công tự trải màng bạt chống thấm ao hồ, Hưng Thịnh Eco cung cấp đầy đủ các dòng phụ kiện thi công lắp đặt chính hãng chuyên dụng dưới đây, giúp bạn xử lý mọi tình huống kỹ thuật tại chỗ:</p>
+                
+                <div class="accessory-item" style="border: 1px solid #ddd; padding: 20px; margin: 20px 0; border-radius: 4px; background: #fafafa;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <strong style="font-size: 18px; color: var(--primary-color);">Băng keo dán bạt, vá bạt HDPE chuyên dụng</strong>
+                            <p style="margin: 8px 0 0; font-size: 14px; color: #555; text-align: left;">Sản phẩm băng keo siêu dính, kháng nước tuyệt đối chuyên dùng để xử lý nhanh các lỗ rách thủng ngoài ý muốn do vật sắc nhọn đâm phải, hoặc dán nối các mép màng diện tích nhỏ vô cùng tiện lợi mà không cần dùng đến các dòng máy hàn nhiệt chuyên dụng cồng kềnh.</p>
+                        </div>
+                        <div style="color: red; font-weight: bold; font-size: 20px; min-width: 150px; text-align: right;">18.000 ₫ – 150.000 ₫</div>
+                    </div>
+                </div>
+
+                <div class="accessory-item" style="border: 1px solid #ddd; padding: 20px; margin: 20px 0; border-radius: 4px; background: #fafafa;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <strong style="font-size: 18px; color: var(--primary-color);">Bích xả đáy – Mặt bích kép chống rò rỉ bạt HDPE</strong>
+                            <p style="margin: 8px 0 0; font-size: 14px; color: #555; text-align: left;">Phụ kiện siết khóa cổ ống xả chuyên dụng xuyên qua màng bạt dưới đáy hồ nuôi cá, nuôi tôm, bể bạt nổi. Thiết kế mặt bích kép thông minh ép chặt hai mặt bạt, xử lý triệt để hiện tượng rò rỉ rơm rỉ nước tại vị trí cổ ống, đảm bảo an toàn tuyệt đối cho ao nuôi công nghệ cao.</p>
+                        </div>
+                        <div style="color: red; font-weight: bold; font-size: 20px; min-width: 150px; text-align: right;">170.000 ₫ – 750.000 ₫</div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <sidebar>
+            <div class="widget">
+                <div class="widget-title">Tư vấn & Mua hàng</div>
+                <div class="hotline-box">
+                    <p>Liên hệ tư vấn tổng thể</p>
+                    <a href="tel:0366511380" class="hotline-number">0366 511 380</a>
+                </div>
+                <div class="hotline-box" style="background: #e8f5e9; border-color: var(--primary-color);">
+                    <p>Thi công dự án & Kỹ thuật</p>
+                    <a href="tel:0344668334" class="hotline-number" style="color: var(--primary-color);">0344 668 334</a>
+                </div>
+                <div class="hotline-box" style="background: #e1f5fe; border-color: #0288d1;">
+                    <p>Liên hệ mua hàng nhanh</p>
+                    <a href="tel:0366511380" class="hotline-number" style="color: #0288d1;">0366 511 380</a>
+                </div>
+            </div>
+
+            <div class="widget">
+                <div class="widget-title">Cam kết dịch vụ</div>
+                <ul class="policy-list">
+                    <li>Chất lượng cao, nhà cung cấp uy tín hàng đầu</li>
+                    <li>Giá cả luôn cạnh tranh tận xưởng sản xuất</li>
+                    <li>Giao hàng nhanh chóng, tận tình, chu đáo toàn quốc</li>
+                    <li>Tư vấn 24/7 mọi thắc mắc, hỗ trợ kỹ thuật trọn đời</li>
+                </ul>
+            </div>
+        </sidebar>
+
     </div>
 
-    <div class="sticky-contacts">
-        <a href="tel:+84334928686" class="contact-circle c-phone" title="Gọi Ngay Hotline"><i class="fa-solid fa-phone"></i></a>
-        <a href="https://zalo.me/0334928686" target="_blank" class="contact-circle c-zalo" title="Nhắn Tin Zalo"><i class="fa-solid fa-comment-dots"></i></a>
-        <a href="https://www.facebook.com/share/18j6rAGFuR/" target="_blank" class="contact-circle c-fb" title="Facebook Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+    <div class="floating-buttons">
+        <a href="tel:0366511380" class="float-btn btn-call">📞 Gọi Ngay</a>
+        <a href="https://zalo.me/0366511380" target="_blank" class="float-btn btn-zalo">💬 Chat Zalo</a>
+        <a href="#" class="float-btn btn-messenger">✉ Messenger</a>
     </div>
 
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Về chúng tôi</h4>
+                <p style="color: #aaa; font-size: 13px; text-align: justify; line-height: 1.5;">Công ty TNHH Hưng Thịnh Eco tự hào là đơn vị uy tín hàng đầu chuyên phân phối vật tư nông nghiệp, cung cấp và trực tiếp thi công các giải pháp màng chống thấm HDPE chất lượng cao trên toàn quốc.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hỗ trợ khách hàng</h4>
+                <ul>
+                    <li><a onclick="showPage('home', 'Trang chủ » Bạt HDPE - Màng chống thấm HDPE')">Chính sách vận chuyển</a></li>
+                    <li><a onclick="showPage('home', 'Trang chủ » Bạt HDPE - Màng chống thấm HDPE')">Chính sách thanh toán</a></li>
+                    <li><a onclick="showPage('home', 'Trang chủ » Bạt HDPE - Màng chống thấm HDPE')">Chính sách đổi trả hàng</a></li>
+                    <li><a onclick="showPage('home', 'Trang chủ » Bạt HDPE - Màng chống thấm HDPE')">Chính sách bảo mật thông tin</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Thông tin liên hệ</h4>
+                <p style="color: #aaa; font-size: 13px; line-height: 1.6;"><strong>Công ty TNHH Hưng Thịnh Eco</strong><br>Địa chỉ miền Bắc: Khu Đô Thị Phố Hiến, Thành phố Hưng Yên.<br>Hotline mua hàng: 0366 511 380<br>Hotline dự án: 0344 668 334</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Hưng Thịnh Eco. All rights reserved. Thiết kế đồng bộ hệ thống danh mục.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId, breadcrumbText) {
+            // Ẩn toàn bộ tất cả các Section nội dung trang con đang mở
+            var sections = document.querySelectorAll('.page-section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            
+            // Kích hoạt hiển thị duy nhất Section trang vừa được người dùng click chọn trên menu
+            var targetSection = document.getElementById(pageId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+            
+            // Cập nhật lại chuỗi chữ Breadcrumb động phía dưới menu cho khớp cấu trúc danh mục
+            document.getElementById('breadcrumb-text').innerText = breadcrumbText;
+            
+            // Tự động cuộn màn hình lên đầu trang mượt mà sau khi chuyển đổi nội dung thành công
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>

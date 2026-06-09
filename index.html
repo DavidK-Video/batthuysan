@@ -3,159 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bạt HDPE - Màng chống thấm HDPE | Công ty TNHH Hưng Thịnh</title>
-    <!-- Nhúng Google Fonts & FontAwesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Bạt HDPE - Màng chống thấm HDPE Chính Hãng | Hưng Thịnh Eco</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* --- CSS SETUP CHUẨN THEO MẪU WEB --- */
+        /* --- ĐỊNH DẠNG PHONG CÁCH GIAO DIỆN --- */
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Roboto', Arial, sans-serif; }
-        body { color: #333; line-height: 1.6; background-color: #ffffff; }
-        a { text-decoration: none; color: inherit; }
-        
+        body { color: #333; line-height: 1.6; background-color: #fcfcfc; }
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+        img { max-width: 100%; height: auto; display: block; border-radius: 4px; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
 
-        /* --- TOP HEADER (THANH THÔNG TIN TRÊN CÙNG) --- */
-        .top-header { background-color: #ffffff; border-bottom: 1px solid #f0f0f0; padding: 8px 0; font-size: 13px; color: #444; }
-        .top-header .container { display: flex; justify-content: flex-end; align-items: center; gap: 25px; }
-        .top-header-item { display: flex; align-items: center; gap: 6px; }
-        .top-header-item i { color: #005A36; }
+        /* --- TOP BAR TRÊN CÙNG --- */
+        .top-bar { background-color: #ffffff; border-bottom: 1px solid #eee; padding: 10px 0; font-size: 13px; color: #555; }
+        .top-bar .container { display: flex; justify-content: flex-end; gap: 25px; align-items: center; }
+        .top-bar-item { display: flex; align-items: center; gap: 6px; }
+        .top-bar-item i { color: #005A36; }
 
-        /* --- LOGO & MENU PHỤ --- */
-        .header-middle { padding: 15px 0; background: #fff; }
+        /* --- KHỐI THƯƠNG HIỆU LOGO --- */
+        .header-middle { padding: 20px 0; background: #fff; }
         .header-middle .container { display: flex; justify-content: space-between; align-items: center; }
         
-        /* Cấu trúc Logo đúng như ảnh mẫu image_35f32a.jpg */
-        .logo-box { display: flex; align-items: center; gap: 5px; font-size: 26px; font-weight: 800; color: #005A36; letter-spacing: -0.5px; }
-        .logo-box span.eco-tag { background: #005A36; color: #fff; padding: 2px 6px; border-radius: 50%; font-size: 11px; font-weight: bold; vertical-align: super; margin-left: -2px; }
-        .logo-subtext { font-size: 9px; color: #666; font-weight: normal; display: block; text-transform: uppercase; margin-top: -4px; }
+        .brand-logo { display: flex; flex-direction: column; }
+        .logo-main { font-size: 28px; font-weight: 900; color: #005A36; letter-spacing: -0.5px; display: flex; align-items: center; gap: 3px; }
+        .logo-main span.eco { background: #005A36; color: #fff; padding: 1px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-left: 2px; }
+        .logo-sub { font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-top: -2px; font-weight: 500; }
 
-        .sub-menu { display: flex; gap: 25px; font-size: 14px; font-weight: 500; color: #444; }
-        .sub-menu a:hover { color: #005A36; }
+        .nav-links-sub { display: flex; gap: 25px; font-size: 14px; font-weight: 500; }
+        .nav-links-sub a:hover { color: #005A36; }
 
-        /* --- MENU CHÍNH MÀU XANH LÁ (MAIN NAVIGATION) --- */
-        .main-nav { background-color: #005A36; }
-        .main-nav ul { display: flex; list-style: none; }
-        .main-nav ul li { border-right: 1px solid rgba(255,255,255,0.15); }
-        .main-nav ul li a { display: block; padding: 12px 18px; color: #fff; font-size: 14px; font-weight: bold; text-transform: none; }
-        .main-nav ul li.active a, .main-nav ul li a:hover { background-color: #e67e22; color: #fff; }
+        /* --- NAVIGATION BAR CHÍNH (XANH LÁ) + DROPDOWN --- */
+        .main-nav-bar { background-color: #005A36; position: relative; z-index: 999; }
+        .main-nav-bar ul { display: flex; list-style: none; }
+        .main-nav-bar ul li { position: relative; border-right: 1px solid rgba(255,255,255,0.12); }
+        .main-nav-bar ul li a { display: block; padding: 14px 20px; color: #fff; font-size: 14px; font-weight: bold; }
+        .main-nav-bar ul li:hover > a, .main-nav-bar ul li.active > a { background-color: #e67e22; }
+
+        /* Cấu trúc Dropdown menu mục Màng Chống Thấm HDPE */
+        .dropdown-menu { position: absolute; top: 100%; left: 0; background: #ffffff; min-width: 260px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: none; list-style: none; border-top: 3px solid #e67e22; }
+        .dropdown-menu li { border-right: none; border-bottom: 1px solid #eee; width: 100%; }
+        .dropdown-menu li a { color: #333 !important; padding: 11px 20px; font-weight: 500; font-size: 13.5px; }
+        .dropdown-menu li a:hover { background-color: #f5f5f5; color: #005A36 !important; padding-left: 25px; }
+        .main-nav-bar ul li:hover .dropdown-menu { display: block; }
 
         /* --- BREADCRUMB --- */
-        .breadcrumb-bar { background: #ffffff; padding: 15px 0 5px 0; font-size: 12px; color: #666; }
-        .breadcrumb-bar a { color: #333; }
-        .breadcrumb-bar span { color: #888; }
+        .breadcrumb { padding: 15px 0 5px 0; font-size: 12px; color: #666; }
+        .breadcrumb a { color: #333; }
+        .breadcrumb span { color: #999; }
 
-        /* --- CẤU TRÚC LAYOUT CHÍNH: 2 CỘT (75% - 25%) --- */
-        .main-wrapper { display: flex; gap: 30px; margin-top: 15px; margin-bottom: 50px; }
-        .main-content { flex: 3; max-width: 75%; }
-        .sidebar { flex: 1; max-width: 25%; min-width: 290px; }
+        /* --- BỐ CỤC CHÍNH 2 CỘT --- */
+        .layout-grid { display: flex; gap: 30px; margin-top: 10px; margin-bottom: 60px; }
+        .left-content { flex: 3; max-width: 75%; }
+        .right-sidebar { flex: 1; max-width: 25%; min-width: 300px; }
 
-        /* --- NỘI DUNG BÀI VIẾT CHUYÊN NGHIỆP --- */
-        .page-title { font-size: 26px; color: #005A36; margin-bottom: 20px; font-weight: bold; }
-        .paragraph-bold { font-size: 15px; font-weight: normal; text-align: justify; margin-bottom: 20px; }
-        .paragraph-bold strong { font-weight: bold; }
-
-        /* Khu vực hình ảnh công trình gốc từ image_35f32a.jpg */
-        .image-gallery-container { margin: 20px 0; border: 1px solid #eaeaea; padding: 5px; background: #fff; }
-        .main-display-img { width: 100%; display: block; object-fit: cover; }
+        /* --- CHI TIẾT NỘI DUNG BÀI VIẾT --- */
+        .main-title { font-size: 28px; color: #005A36; font-weight: 700; margin-bottom: 15px; }
+        .text-block { font-size: 15px; margin-bottom: 18px; text-align: justify; color: #444; }
+        .text-block strong { color: #111; }
+        .section-title { font-size: 20px; color: #005A36; font-weight: bold; margin: 35px 0 15px 0; border-bottom: 2px solid #005A36; padding-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .sub-section-title { font-size: 16px; color: #2c3e50; font-weight: bold; margin: 20px 0 10px 0; padding-left: 8px; border-left: 3px solid #e67e22; }
         
-        .thumbnail-bar { display: flex; gap: 6px; margin-top: 6px; overflow-x: auto; }
-        .thumbnail-bar img { width: 68px; height: 48px; object-fit: cover; border: 1px solid #ddd; cursor: pointer; opacity: 0.8; }
-        .thumbnail-bar img:hover { opacity: 1; border-color: #005A36; }
+        .list-style { margin-left: 22px; margin-bottom: 20px; font-size: 15px; color: #444; }
+        .list-style li { margin-bottom: 8px; }
 
-        .sub-heading { font-size: 20px; color: #005A36; font-weight: bold; margin: 30px 0 15px 0; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        /* Khung hiển thị ảnh mẫu chuẩn */
+        .image-showcase { border: 1px solid #e5e5e5; padding: 6px; background: #fff; margin: 20px 0; border-radius: 4px; }
+        .image-showcase img.big-img { width: 100%; height: auto; display: block; }
+        .thumb-list { display: flex; gap: 6px; margin-top: 6px; overflow-x: auto; }
+        .thumb-list img { width: 68px; height: 48px; object-fit: cover; border: 1px solid #ccc; opacity: 0.8; cursor: pointer; }
 
-        /* Bảng giá tối ưu theo mẫu */
-        .price-table-header { background: #f4faf7; padding: 12px 15px; border-left: 4px solid #005A36; margin-top: 25px; display: flex; justify-content: space-between; align-items: center; }
-        .price-table-title { font-size: 16px; font-weight: bold; color: #005A36; }
-        .price-table-sub { font-size: 12px; color: #666; font-weight: normal; margin-top: 2px; }
-        .badge-info { background: #fff; border: 1px solid #005A36; color: #005A36; font-size: 12px; padding: 4px 10px; font-weight: bold; border-radius: 2px; }
+        /* Bảng giá chi tiết mẫu */
+        .price-section { margin: 25px 0; }
+        .price-header { background: #f4faf7; padding: 12px 15px; border-left: 4px solid #005A36; display: flex; justify-content: space-between; align-items: center; border-radius: 0 4px 4px 0; }
+        .price-title-text { font-size: 16px; font-weight: bold; color: #005A36; }
+        .price-sub-text { font-size: 12px; color: #666; margin-top: 2px; }
+        .tag-status { background: #fff; border: 1px solid #005A36; color: #005A36; font-size: 11px; padding: 3px 8px; font-weight: bold; border-radius: 2px; }
+        
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; text-align: left; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        .data-table th, .data-table td { border: 1px solid #dddddd; padding: 12px; }
+        .data-table th { background-color: #f8f9fa; color: #333; font-weight: bold; }
+        .data-table tr:nth-child(even) { background-color: #fdfdfd; }
+        .note-text { font-size: 12px; color: #666; font-style: italic; margin-top: 6px; }
 
-        /* --- CỘT SIDEBAR PHẢI --- */
-        .sticky-box { position: sticky; top: 15px; display: flex; flex-direction: column; gap: 20px; }
+        /* Sản phẩm lưới ô vuông bên dưới bài viết */
+        .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 25px; }
+        .product-card { background: #fff; border: 1px solid #e2e8f0; padding: 15px; text-align: center; border-radius: 4px; transition: 0.3s; }
+        .product-card:hover { transform: translateY(-4px); box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-color: #005A36; }
+        .product-card img { width: 100%; height: 150px; object-fit: cover; background: #eee; margin-bottom: 12px; }
+        .product-name { font-size: 14px; font-weight: bold; color: #333; height: 40px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin-bottom: 8px; }
+        .product-price { font-size: 14px; color: #e67e22; font-weight: bold; }
+
+        /* Bài viết liên quan */
+        .related-box { border-top: 2px solid #eee; margin-top: 40px; padding-top: 20px; }
+        .related-title { font-size: 16px; font-weight: bold; color: #333; margin-bottom: 15px; text-transform: uppercase; }
+        .related-item { margin-bottom: 12px; font-size: 14px; }
+        .related-item a { color: #005A36; font-weight: 500; }
+        .related-item a:hover { color: #e67e22; }
+
+        /* --- SIDEBAR BÊN PHẢI --- */
+        .sidebar-sticky { position: sticky; top: 15px; display: flex; flex-direction: column; gap: 20px; }
         
         /* Hộp tư vấn */
-        .consulting-box { background: #fff; border: 1px solid #e2e8f0; border-radius: 4px; padding: 25px 15px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
-        .consulting-title { font-size: 14px; font-weight: 700; color: #444; letter-spacing: 0.5px; margin-bottom: 15px; text-transform: uppercase; }
-        .consulting-icon { width: 100px; margin: 0 auto 15px auto; display: block; }
-        .consulting-desc { font-size: 13px; color: #555; }
-        .hotline-link { display: block; font-size: 30px; color: #005A36; font-weight: 800; margin: 10px 0; font-family: Arial, sans-serif; }
-        .or-divider { font-size: 13px; color: #999; margin: 5px 0; text-transform: lowercase; }
-        .chat-title { font-size: 13px; font-weight: bold; color: #333; margin-bottom: 12px; }
+        .box-sidebar { background: #fff; border: 1px solid #e2e8f0; border-radius: 4px; padding: 25px 15px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+        .box-title-sb { font-size: 14px; font-weight: bold; color: #444; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 0.5px; }
+        .avatar-holder { width: 80px; height: 80px; margin: 0 auto 12px auto; background: #f4faf7; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .avatar-holder i { font-size: 40px; color: #005A36; }
+        .phone-display { display: block; font-size: 28px; color: #005A36; font-weight: 900; margin: 8px 0; }
         
-        .chat-group-buttons { display: flex; justify-content: center; gap: 15px; }
-        .social-chat-btn { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 6px; border: 1px solid #e0e0e0; background: #fff; transition: 0.2s; }
-        .social-chat-btn img { width: 28px; height: 28px; }
-        .social-chat-btn:hover { border-color: #005A36; transform: translateY(-2px); }
+        .chat-row { display: flex; justify-content: center; gap: 15px; margin-top: 15px; }
+        .btn-chat-link { width: 46px; height: 46px; border: 1px solid #ddd; border-radius: 6px; display: flex; align-items: center; justify-content: center; background: #fff; transition: 0.2s; }
+        .btn-chat-link img { width: 26px; height: 26px; }
+        .btn-chat-link:hover { border-color: #005A36; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
 
-        /* Hộp form điền thông tin (Yêu cầu báo giá) */
-        .quote-form-box { background: #fff; border: 1px solid #e2e8f0; border-radius: 4px; padding: 25px 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
-        .quote-form-box h3 { font-size: 14px; font-weight: bold; color: #333; text-align: center; margin-bottom: 18px; letter-spacing: 0.5px; }
+        /* Form đăng ký báo giá */
+        .form-sb-box { background: #fff; border: 1px solid #e2e8f0; border-radius: 4px; padding: 25px 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+        .form-sb-box h3 { font-size: 14px; font-weight: bold; color: #333; text-align: center; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .input-group { margin-bottom: 12px; }
+        .input-control { width: 100%; padding: 11px 12px; border: 1px solid #ccc; border-radius: 3px; font-size: 13.5px; color: #333; outline: none; transition: 0.2s; }
+        .input-control:focus { border-color: #005A36; box-shadow: 0 0 0 2px rgba(0,90,54,0.08); }
+        .textarea-control { width: 100%; padding: 11px 12px; border: 1px solid #ccc; border-radius: 3px; font-size: 13.5px; color: #333; height: 100px; resize: none; font-family: inherit; outline: none; transition: 0.2s; }
+        .textarea-control:focus { border-color: #005A36; box-shadow: 0 0 0 2px rgba(0,90,54,0.08); }
         
-        .form-control-group { margin-bottom: 12px; }
-        .form-input-item { width: 100%; padding: 11px 12px; border: 1px solid #cccccc; border-radius: 3px; font-size: 13.5px; color: #333; transition: 0.2s; background: #fff; }
-        .form-input-item:focus { border-color: #005A36; outline: none; box-shadow: 0 0 0 2px rgba(0,90,54,0.1); }
-        .form-textarea-item { width: 100%; padding: 11px 12px; border: 1px solid #cccccc; border-radius: 3px; font-size: 13.5px; color: #333; height: 100px; resize: none; font-family: inherit; }
-        .form-textarea-item:focus { border-color: #005A36; outline: none; }
-        
-        .submit-quote-btn { width: 100%; background: #005A36; color: #ffffff; border: none; padding: 12px; font-weight: bold; font-size: 14px; border-radius: 3px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; transition: 0.3s; }
-        .submit-quote-btn:hover { background: #004026; box-shadow: 0 3px 10px rgba(0,90,54,0.2); }
+        .btn-send-form { width: 100%; background: #005A36; color: #fff; border: none; padding: 13px; font-weight: bold; font-size: 14px; text-transform: uppercase; border-radius: 3px; cursor: pointer; transition: 0.3s; }
+        .btn-send-form:hover { background: #004026; box-shadow: 0 3px 10px rgba(0,90,54,0.2); }
 
-        /* --- FOOTER ĐƠN GIẢN --- */
-        footer { background: #005A36; color: #fff; text-align: center; padding: 15px 0; font-size: 13px; }
+        /* Khối cam kết */
+        .commit-list { list-style: none; font-size: 13.5px; color: #444; display: flex; flex-direction: column; gap: 12px; background: #fff; border: 1px solid #e2e8f0; padding: 18px; border-radius: 4px; }
+        .commit-list li { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+        .commit-list li i { color: #005A36; font-size: 16px; }
 
-        /* --- CÁC NÚT ĐỘNG FLOATING BÊN TRÁI MÀN HÌNH --- */
-        .floating-action-container { position: fixed; bottom: 30px; left: 25px; z-index: 99999; display: flex; flex-direction: column; gap: 15px; }
-        .action-circle-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: 0.3s; }
-        .action-circle-btn:hover { transform: scale(1.1); }
-        
-        .action-circle-btn.phone-btn { background: #e67e22; animation: ringPulse 1.6s infinite ease-in-out; }
-        .action-circle-btn.zalo-btn { background: #0084FF; }
-        .action-circle-btn.msg-btn { background: #1877F2; }
+        /* --- FOOTER CHÂN TRANG --- */
+        .footer-details { background-color: #ffffff; border-top: 1px solid #eee; padding: 45px 0; font-size: 14px; color: #444; }
+        .footer-details .container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .footer-col h4 { font-size: 15px; font-weight: bold; color: #111; margin-bottom: 18px; text-transform: uppercase; position: relative; padding-bottom: 5px; }
+        .footer-col h4::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40px; height: 2px; background-color: #e67e22; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; font-size: 13.5px; }
+        .footer-col ul li a:hover { color: #005A36; padding-left: 4px; }
 
-        @keyframes ringPulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230, 126, 34, 0.7); }
-            70% { transform: scale(1.08); box-shadow: 0 0 0 12px rgba(230, 126, 34, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230, 126, 34, 0); }
+        .company-title-ft { font-size: 16px; font-weight: bold; color: #005A36; margin-bottom: 15px; text-transform: uppercase; }
+        .info-txt-ft { font-size: 13.5px; margin-bottom: 8px; line-height: 1.5; }
+
+        .bottom-copyright { background: #005A36; color: rgba(255,255,255,0.85); text-align: center; padding: 15px 0; font-size: 13px; }
+
+        /* --- PHÍM NỔI LIÊN HỆ TIỆN ÍCH ĐỘNG --- */
+        .sticky-contacts { position: fixed; bottom: 30px; left: 25px; z-index: 99999; display: flex; flex-direction: column; gap: 12px; }
+        .contact-circle { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 23px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: 0.3s; }
+        .contact-circle:hover { transform: scale(1.1); }
+        .contact-circle.c-phone { background: #e67e22; animation: phoneShake 1.6s infinite ease-in-out; }
+        .contact-circle.c-zalo { background: #0084FF; }
+        .contact-circle.c-fb { background: #1877F2; }
+
+        @keyframes phoneShake {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230,126,34,0.7); }
+            70% { transform: scale(1.08); box-shadow: 0 0 0 12px rgba(230,126,34,0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230,126,34,0); }
         }
 
-        /* --- PHẢN HỒI GIAO DIỆN DI ĐỘNG --- */
+        /* Responsive */
         @media (max-width: 992px) {
-            .main-wrapper { flex-direction: column; }
-            .main-content, .sidebar { max-width: 100%; width: 100%; }
+            .layout-grid, .footer-details .container { grid-template-columns: 100%; flex-direction: column; }
+            .left-content, .right-sidebar { max-width: 100%; width: 100%; }
             .header-middle .container { flex-direction: column; gap: 15px; text-align: center; }
-            .top-header .container { justify-content: center; }
+            .top-bar .container { justify-content: center; }
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .product-grid { grid-template-columns: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <!-- THANH THÔNG TIN TRÊN CÙNG (TOP HEADER) -->
-    <div class="top-header">
+    <div class="top-bar">
         <div class="container">
-            <div class="top-header-item">
-                <i class="fa-solid fa-envelope"></i>
-                <span>hungthinh.ecohy@gmail.com</span>
-            </div>
-            <div class="top-header-item">
-                <i class="fa-solid fa-clock"></i>
-                <span>08:00 - 17:00</span>
-            </div>
+            <div class="top-bar-item"><i class="fa-solid fa-envelope"></i> hungthinh.ecohy@gmail.com</div>
+            <div class="top-bar-item"><i class="fa-solid fa-clock"></i> 08:00 - 17:00</div>
         </div>
     </div>
 
-    <!-- KHU VỰC LOGO & MENU PHỤ -->
     <div class="header-middle">
         <div class="container">
-            <!-- Khối thương hiệu chuẩn Hưng Thịnh Eco -->
-            <div>
-                <a href="https://batthuysan-yohu.online" class="logo-box">
-                    HƯNG THỊNH<span class="eco-tag">ECO</span>
-                </a>
-                <span class="logo-subtext">Vật tư nông nghiệp</span>
+            <div class="brand-logo">
+                <a href="https://batthuysan-yohu.online" class="logo-main">HƯNG THỊNH<span class="eco">ECO</span></a>
+                <span class="logo-sub">Vật tư nông nghiệp</span>
             </div>
-            <!-- Menu phụ bên phải -->
-            <div class="sub-menu">
+            <div class="nav-links-sub">
                 <a href="https://batthuysan-yohu.online">Trang chủ</a>
                 <a href="#">Giới thiệu</a>
                 <a href="#">Liên hệ</a>
@@ -164,11 +197,22 @@
         </div>
     </div>
 
-    <!-- THANH MENU CHÍNH CHỨA DANH MỤC SẢN PHẨM (MÀU XANH LÁ) -->
-    <nav class="main-nav">
+    <nav class="main-nav-bar">
         <div class="container">
             <ul>
-                <li class="active"><a href="#">Màng Chống Thấm HDPE <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-left:2px;"></i></a></li>
+                <li class="active">
+                    <a href="#">Màng Chống Thấm HDPE <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-left:2px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Bạt Lót Ao Hồ Nuôi Cá</a></li>
+                        <li><a href="#">Bể Bạt HDPE</a></li>
+                        <li><a href="#">Bạt Lót Ao Hồ Nuôi Tôm</a></li>
+                        <li><a href="#">Bạt Chống Thấm Mái Nhà</a></li>
+                        <li><a href="#">Bạt Lót Ao Hồ Chứa Nước</a></li>
+                        <li><a href="#">Bạt Chống Thấm Sân Thượng</a></li>
+                        <li><a href="#">Bạt Biogas</a></li>
+                        <li><a href="#">Phụ Kiện Màng – Bạt HDPE</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Vải Địa Kỹ Thuật</a></li>
                 <li><a href="#">Ống Tưới Nhỏ Giọt</a></li>
                 <li><a href="#">Bạt Phủ Chống Cỏ</a></li>
@@ -178,108 +222,235 @@
         </div>
     </nav>
 
-    <!-- ĐƯỜNG DẪN LINK (BREADCRUMB) -->
-    <div class="breadcrumb-bar">
-        <div class="container">
+    <div class="container">
+        <div class="breadcrumb">
             <a href="https://batthuysan-yohu.online">Trang chủ</a> » <span>Bạt HDPE - Màng chống thấm HDPE</span>
         </div>
     </div>
 
-    <!-- KHU VỰC BỐ CỤC CHÍNH (MAIN WRAPPER) -->
     <div class="container">
-        <div class="main-wrapper">
+        <div class="layout-grid">
             
-            <!-- CỘT TRÁI: NỘI DUNG CHI TIẾT SẢN PHẨM -->
-            <main class="main-content">
-                <h1 class="page-title">Bạt HDPE - Màng chống thấm HDPE</h1>
+            <main class="left-content">
+                <h1 class="main-title">Bạt HDPE - Màng chống thấm HDPE</h1>
                 
-                <p class="paragraph-bold">
-                    <strong>Bạt HDPE</strong>, hay còn gọi là <strong>màng chống thấm HDPE</strong>, là một vật liệu nổi bật trong các công trình xây dựng, nông nghiệp, thủy lợi và xử lý chất thải. Với tính năng chống thấm vượt trội, bạt HDPE đã trở thành lựa chọn hàng đầu cho các dự án đòi hỏi tính năng chống thấm hiệu quả và bền vững.
+                <p class="text-block">
+                    <strong>Bạt HDPE</strong>, hay còn gọi là màng chống thấm HDPE, là một vật liệu nổi bật trong các công trình xây dựng, nông nghiệp, thủy lợi và xử lý chất thải. Với tính năng chống thấm vượt trội, bạt HDPE đã trở thành lựa chọn hàng đầu cho các dự án đòi hỏi tính năng chống thấm hiệu quả và bền vững.
                 </p>
 
-                <!-- Khung hiển thị hình ảnh từ file mẫu "image_35f32a.jpg" -->
-                <div class="image-gallery-container">
-                    <!-- Ảnh lớn chính diện công trình (Hệ thống tự load ảnh mẫu dự phòng nếu chưa cấu hình đường dẫn) -->
-                    <img src="image_35f32a.jpg" class="main-display-img" alt="Thi công màng chống thấm HDPE thực tế tại công trình" onerror="this.src='https://placehold.co/800x460/005A36/FFFFFF?text=image_35f32a.jpg+Chính+Hãng'">
-                    
-                    <!-- Dải ảnh nhỏ (Thumbnails) phía dưới chân ảnh chính -->
-                    <div class="thumbnail-bar">
-                        <img src="thumb1.jpg" alt="Công trình bạt HDPE 1" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+1'">
-                        <img src="thumb2.jpg" alt="Công trình bạt HDPE 2" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+2'">
-                        <img src="thumb3.jpg" alt="Công trình bạt HDPE 3" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+3'">
-                        <img src="thumb4.jpg" alt="Công trình bạt HDPE 4" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+4'">
-                        <img src="thumb5.jpg" alt="Công trình bạt HDPE 5" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+5'">
-                        <img src="thumb6.jpg" alt="Công trình bạt HDPE 6" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+6'">
-                        <img src="thumb7.jpg" alt="Công trình bạt HDPE 7" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+7'">
+                <div class="image-showcase">
+                    <img src="image_35f32a.jpg" class="big-img" alt="Bạt HDPE - Màng chống thấm HDPE công trình thực tế" onerror="this.src='https://placehold.co/800x460/005A36/FFFFFF?text=image_35f32a.jpg'">
+                    <div class="thumb-list">
+                        <img src="thumb1.jpg" alt="1" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+1'">
+                        <img src="thumb2.jpg" alt="2" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+2'">
+                        <img src="thumb3.jpg" alt="3" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+3'">
+                        <img src="thumb4.jpg" alt="4" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+4'">
+                        <img src="thumb5.jpg" alt="5" onerror="this.src='https://placehold.co/68x48/ddd/333?text=Ảnh+5'">
                     </div>
                 </div>
 
-                <h2 class="sub-heading">Sơ lược về bạt HDPE – màng chống thấm HDPE độ bền trên 10 năm</h2>
-                <p class="paragraph-bold">
-                    <strong>Bạt HDPE</strong> là loại màng nhựa được sản xuất từ nguyên liệu High-Density Polyethylene (HDPE) – một loại nhựa nhiệt dẻo có độ bền cơ học cao, khả năng chống thấm nước tuyệt đối và kháng hóa chất tốt. Với cấu trúc đặc biệt, <strong>màng HDPE</strong> có khả năng ngăn chặn sự thẩm thấu của nước và các chất lỏng khác, bảo vệ công trình một cách hiệu quả.
+                <h2 class="section-title"><i class="fa-solid fa-circle-info"></i> Sơ lược về bạt HDPE – Độ bền trên 10 năm</h2>
+                <p class="text-block">
+                    Bạt HDPE là loại màng nhựa được sản xuất từ nguyên liệu High-Density Polyethylene (HDPE) – một loại nhựa nhiệt dẻo có độ bền cơ học cao, khả năng chống thấm nước tuyệt đối và kháng hóa chất tốt. Với cấu trúc đặc biệt, màng HDPE có khả năng ngăn chặn sự thẩm thấu của nước và các chất lỏng khác, bảo vệ công trình một cách hiệu quả và lâu dài dưới tác động khắc nghiệt của môi trường.
                 </p>
 
-                <!-- Thanh tiêu đề bảng giá chuẩn đồ họa thương hiệu -->
-                <div class="price-table-header">
-                    <div>
-                        <div class="price-table-title">Bảng Giá Màng HDPE</div>
-                        <div class="price-table-sub">Đơn vị tính: m² — Đơn giá tham khảo (VND/m²)</div>
+                <div class="price-section">
+                    <div class="price-header">
+                        <div>
+                            <div class="price-title-text">Bảng Giá Màng HDPE Chính Hãng</div>
+                            <div class="price-sub-text">Đơn vị tính: m² — Đơn giá tham khảo tại xưởng (VND/m²)</div>
+                        </div>
+                        <div>
+                            <span class="tag-status">Miễn phí tư vấn</span>
+                            <span class="tag-status" style="margin-left: 4px;">Nhận hàn ghép theo yêu cầu</span>
+                        </div>
                     </div>
-                    <div>
-                        <span class="badge-info">Miễn phí tư vấn</span>
-                        <span class="badge-info" style="margin-left: 5px;">Nhận hàn ghép theo yêu cầu</span>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Quy cách màng HDPE</th>
+                                <th>ĐVT</th>
+                                <th>Độ dày</th>
+                                <th>Đơn giá (VND/m²)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Khổ 3/4/5/6 dài 50 hoặc 100</td><td>m²</td><td>0.30 mm</td><td>11.000</td></tr>
+                            <tr><td>2</td><td>Khổ 4/5/6 dài 50 hoặc 100</td><td>m²</td><td>0.50 mm</td><td>17.000</td></tr>
+                            <tr><td>3</td><td>Khổ 4m × 50m (D × R)</td><td>m²</td><td>0.75 mm</td><td>29.000</td></tr>
+                            <tr><td>4</td><td>Khổ 4m × 50m (D × R)</td><td>m²</td><td>1.00 mm</td><td>37.000</td></tr>
+                            <tr><td>5</td><td>Khổ 4m × 50m (D × R)</td><td>m²</td><td>1.50 mm</td><td>65.000</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="note-text">* Giá có thể thay đổi theo thời điểm và số lượng. Vui lòng liên hệ để nhận báo giá tốt nhất.</p>
+                </div>
+
+                <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Hàn Ghép Bạt HDPE Tại Xưởng & Thi Công Tận Nơi</h2>
+                <p class="text-block">
+                    Công ty Hưng Thịnh Eco chuyên nhận hàn ghép bạt HDPE theo yêu cầu với chất lượng cao và giá thành tốt nhất thị trường. Chúng tôi hỗ trợ hàn ghép trực tiếp tại xưởng để tạo ra những tấm bạt có kích thước lớn, phù hợp với từng mục đích sử dụng như ao nuôi thủy sản, bể chứa nước, bãi chôn lấp chất thải…
+                </p>
+                <p class="text-block">
+                    Tại xưởng, bạt HDPE được hàn ghép sẵn theo kích thước khách hàng mong muốn, ví dụ: 7m × 10m, 15m × 20m, 20m × 30m hoặc các quy cách lớn hơn. Việc hàn trước tại xưởng giúp tiết kiệm thời gian lắp đặt tại công trình, đảm bảo đường hàn kín, chắc chắn và thẩm mỹ. Đối với các đơn hàng lớn từ 1.000m² trở lên, đội ngũ kỹ thuật của chúng tôi sẵn sàng thi công hàn bạt trực tiếp bằng máy hàn chuyên dụng tại công trình trên toàn quốc.
+                </p>
+
+                <h2 class="section-title"><i class="fa-solid fa-fish"></i> 1. Bạt Lót Ao Hồ Nuôi Cá & Nuôi Tôm</h2>
+                <p class="text-block">
+                    Trong ngành nuôi trồng thủy sản công nghiệp hiện đại, bạt lót ao hồ HDPE đã trở thành giải pháp công nghệ hàng đầu giúp tối ưu hóa sản xuất, kiểm soát rủi ro dịch bệnh và bảo vệ môi trường ổn định.
+                </p>
+                <div class="sub-section-title">Ưu điểm vượt trội cho ao tôm và ao cá:</div>
+                <ul class="list-style">
+                    <li><strong>Ngăn ngừa dịch bệnh:</strong> Cách ly hoàn toàn nước ao nuôi với mầm bệnh, vi khuẩn có hại bám trong đất bờ ao.</li>
+                    <li><strong>Ổn định môi trường nước:</strong> Ngăn chặn hiện tượng xói mòn bờ ao, giữ lượng oxy ổn định, dễ dàng kiểm soát độ pH và độ mặn.</li>
+                    <li><strong>Thu hoạch nhanh chóng:</strong> Bề mặt bạt trơn láng giúp việc thu hoạch nhanh hơn, hạn chế tổn thương cho tôm cá và rút ngắn thời gian làm vệ sinh phơi ao giữa các vụ nuôi.</li>
+                </ul>
+
+                <h2 class="section-title"><i class="fa-solid fa-box"></i> 2. Mô Hình Bể Bạt HDPE Nuôi Thủy Sản Di Động</h2>
+                <p class="text-block">
+                    <strong>Bể bạt HDPE</strong> (độ dày thông dụng 0.5mm) là giải pháp linh hoạt và cực kỳ tiết kiệm thay thế cho các hệ thống bể xi măng truyền thống nặng nề, tốn kém. Mô hình này rất được ưa chuộng để nuôi cá, nuôi lươn, ếch, ba ba, cua hoặc trồng rau thủy canh tuần hoàn (mô hình VAC).
+                </p>
+                <ul class="list-style">
+                    <li><strong>Cấu tạo vững chắc:</strong> Gồm phần lòng bể bằng màng HDPE 0.5mm nguyên sinh bọc quanh khung chịu lực làm từ lưới thép mạ kẽm hoặc khung sắt/inox kiên cố.</li>
+                    <li><strong>Dễ di chuyển:</strong> Kết cấu mô-đun lắp ghép nhanh chóng trong 1 - 2 ngày, thuận tiện tháo dỡ hoặc di dời vị trí chăn nuôi khi cần thiết.</li>
+                    <li><strong>Tiết kiệm:</strong> Chi phí đầu tư vật tư ban đầu thấp hơn rất nhiều so với xây gạch bê tông mà vẫn đảm bảo tuổi thọ bền bỉ trên 10 năm.</li>
+                </ul>
+
+                <h2 class="section-title"><i class="fa-solid fa-house-shield"></i> 3. Bạt Chống Thấm Mái Nhà & Sân Thượng</h2>
+                <p class="text-block">
+                    Khi mùa mưa đến, hiện tượng thấm dột trần nhà, nứt sàn bê tông sân thượng luôn gây đau đầu cho các chủ công trình. Màng HDPE độ dày từ 0.3mm đến 0.75mm là khắc tinh triệt để của sự thấm ẩm.
+                </p>
+                <ul class="list-style">
+                    <li><strong>Chống dột trần và mái:</strong> Trải lót dưới lớp ngói hoặc tôn giúp ngăn chặn triệt để nước mưa thẩm thấu sâu vào cấu trúc tường.</li>
+                    <li><strong>Chống thấm sân thượng lộ thiên:</strong> Lớp màng HDPE dẻo dai chịu được các vết nứt chân chim của bê tông khi nhiệt độ thay đổi, bảo vệ tuyệt đối trần nhà bên dưới không bị ẩm mốc, ố vàng.</li>
+                </ul>
+
+                <h2 class="section-title"><i class="fa-solid fa-droplet"></i> 4. Bạt Lót Ao Hồ Chứa Nước & Tưới Tiêu Nông Nghiệp</h2>
+                <p class="text-block">
+                    Tại các vùng đất cát, khô hạn hoặc vùng trồng cây ăn trái giá trị cao (như sầu riêng, bơ, thanh long), việc đắp hồ chứa nước giữ ẩm là sống còn. Bạt lót hồ chứa nước HDPE giúp giữ trọn vẹn từng giọt nước quý giá.
+                </p>
+                <ul class="list-style">
+                    <li><strong>Chống thất thoát nước:</strong> Ngăn chặn hoàn toàn hiện tượng nước thấm rút vào lòng đất cát, đảm bảo lượng nước tưới dự trữ đầy đủ trong mùa khô hạn.</li>
+                    <li><strong>Lót kênh dẫn nước:</strong> Giúp dòng chảy thông suốt, không bị sạt lở bờ kênh, tiết kiệm chi phí bơm xả.</li>
+                </ul>
+
+                <h2 class="section-title"><i class="fa-solid fa-biohazard"></i> 5. Ứng Dụng Khép Kín Trong Hệ Thống Bạt Biogas</h2>
+                <p class="text-block">
+                    Đối với các trang trại chăn nuôi gia súc quy mô lớn, màng HDPE độ dày lớn (từ 1.0mm - 2.0mm) là vật liệu bắt buộc để phủ kín các hồ chứa chất thải, tạo ra **hệ thống hầm Biogas sinh học** thu hồi khí độc hại.
+                </p>
+                <ul class="list-style">
+                    <li><strong>Chứa khí Methane hiệu quả:</strong> Kháng tia UV cực cao, giữ kín lượng khí sinh học thu được để phục vụ đun nấu hoặc chạy máy phát điện.</li>
+                    <li><strong>Bảo vệ môi trường:</strong> Ngăn mùi hôi thối phát tán ra khu dân cư, ngăn chất thải lỏng ngấm xuống mạch nước ngầm xung quanh.</li>
+                </ul>
+
+                <h2 class="section-title"><i class="fa-solid fa-toolbox"></i> 6. Phụ Kiện Chuyên Dụng Cho Màng Bạt HDPE</h2>
+                <p class="text-block">
+                    Để công trình thi công bạt HDPE hoàn hảo, không thể thiếu các phụ kiện lắp đặt và xử lý sự cố đi kèm:
+                </p>
+                <ul class="list-style">
+                    <li><strong>Băng keo dán bạt, vá bạt HDPE chuyên dụng:</strong> Độ bám dính siêu cường, chịu nước tuyệt đối. Thích hợp để xử lý nhanh các vết rách, thủng đột xuất trong quá trình sử dụng (Mức giá dao động từ 18.000 ₫ – 150.000 ₫).</li>
+                    <li><strong>Mặt bích xả đáy (Bích kép):</strong> Phụ kiện kết nối ống thoát nước xuyên qua màng bạt HDPE, đảm bảo ép chặt không bị rò rỉ nước ở đáy ao hay lòng bể bạt (Mức giá từ 170.000 ₫ – 750.000 ₫).</li>
+                </ul>
+
+                <h2 class="section-title"><i class="fa-solid fa-boxes-stacked"></i> Danh Mục Sản Phẩm Đang Cung Cấp</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="product1.jpg" alt="Băng keo dán bạt" onerror="this.src='https://placehold.co/200x140/eee/333?text=Băng+Keo+Vá+Bạt'">
+                        <div class="product-name">Băng keo dán bạt, vá bạt HDPE</div>
+                        <div class="product-price">18.000 ₫ – 150.000 ₫</div>
+                    </div>
+                    <div class="product-card">
+                        <img src="product2.jpg" alt="Bạt HDPE 0.3 mm" onerror="this.src='https://placehold.co/200x140/eee/333?text=HDPE+0.3mm'">
+                        <div class="product-name">Bạt HDPE 0.3 mm Nguyên Cuộn</div>
+                        <div class="product-price">Giá: Liên hệ Hotline</div>
+                    </div>
+                    <div class="product-card">
+                        <img src="product3.jpg" alt="Bạt HDPE 0.5 mm" onerror="this.src='https://placehold.co/200x140/eee/333?text=HDPE+0.5mm'">
+                        <div class="product-name">Bạt HDPE 0.5 mm Chất Lượng Cao</div>
+                        <div class="product-price">Giá: Liên hệ Hotline</div>
+                    </div>
+                    <div class="product-card">
+                        <img src="product4.jpg" alt="Bạt HDPE 0.75 mm" onerror="this.src='https://placehold.co/200x140/eee/333?text=HDPE+0.75mm'">
+                        <div class="product-name">Bạt HDPE 0.75 mm Chống Thấm</div>
+                        <div class="product-price">Giá: Liên hệ Hotline</div>
+                    </div>
+                    <div class="product-card">
+                        <img src="product5.jpg" alt="Bạt HDPE 1 mm" onerror="this.src='https://placehold.co/200x140/eee/333?text=HDPE+1mm'">
+                        <div class="product-name">Bạt HDPE 1 mm Công Trình Thủy Lợi</div>
+                        <div class="product-price">Giá: Liên hệ Hotline</div>
+                    </div>
+                    <div class="product-card">
+                        <img src="product6.jpg" alt="Bạt HDPE 2 mm" onerror="this.src='https://placehold.co/200x140/eee/333?text=HDPE+2mm'">
+                        <div class="product-name">Bạt HDPE 2 mm Độ Bền Cao</div>
+                        <div class="product-price">Giá: Liên hệ Hotline</div>
+                    </div>
+                    <div class="product-card">
+                        <img src="product7.jpg" alt="Bể bạt HDPE" onerror="this.src='https://placehold.co/200x140/eee/333?text=Bể+Bạt+HDPE'">
+                        <div class="product-name">Bể Bạt HDPE 0.5mm Nuôi Cá, Nuôi Tôm, Nuôi Ốc</div>
+                        <div class="product-price">180.000 ₫ – 1.620.000 ₫</div>
+                    </div>
+                    <div class="product-card">
+                        <img src="product8.jpg" alt="Mặt bích kép" onerror="this.src='https://placehold.co/200x140/eee/333?text=Mặt+Bích+Xả+Đáy'">
+                        <div class="product-name">Bích xả đáy – mặt bích kép lắp cho màng bạt HDPE</div>
+                        <div class="product-price">170.000 ₫ – 750.000 ₫</div>
+                    </div>
+                </div>
+
+                <div class="related-box">
+                    <div class="related-title">Bài viết liên quan</div>
+                    <div class="related-item">
+                        <a href="#">» Bạt HDPE giá bao nhiêu? Những yếu tố quyết định giá thành sản phẩm</a>
+                    </div>
+                    <div class="related-item">
+                        <a href="#">» Xu hướng sử dụng bạt HDPE mới nhất và những cải tiến đáng chú ý trong nông nghiệp</a>
                     </div>
                 </div>
             </main>
 
-            <!-- CỘT PHẢI: KHU VỰC TƯ VẤN & FORM ĐĂNG KÝ THÔNG TIN -->
-            <aside class="sidebar">
-                <div class="sticky-box">
+            <aside class="right-sidebar">
+                <div class="sidebar-sticky">
                     
-                    <!-- Hộp hotline và kênh chat trực tuyến -->
-                    <div class="consulting-box">
-                        <div class="consulting-title">Chúng tôi sẵn sàng tư vấn</div>
-                        
-                        <!-- Đồ họa tổng đài viên chuyên nghiệp -->
-                        <div class="consulting-icon">
-                            <svg viewBox="0 0 100 100" width="75" height="75" style="fill: #005A36; opacity: 0.9;">
-                                <circle cx="50" cy="50" r="46" fill="#f4faf7"/>
-                                <path d="M50 20c-13.8 0-25 11.2-25 25 0 5.2 1.6 10.1 4.3 14.2l-3.8 11.4 11.9-3.7c3.9 2.4 8.5 3.8 13.4 3.8 13.8 0 25-11.2 25-25S63.8 20 50 20zm-4 32h-5v-5h5v5zm0-9h-5v-10h5v10zm12 9h-5v-5h5v5zm0-9h-5v-10h5v10z"/>
-                            </svg>
+                    <div class="box-sidebar">
+                        <div class="box-title-sb">Chúng tôi sẵn sàng tư vấn</div>
+                        <div class="avatar-holder">
+                            <i class="fa-solid fa-headset"></i>
                         </div>
+                        <p style="font-size:13px; color:#555;">Để được hỗ trợ tốt nhất, hãy gọi ngay</p>
+                        <a href="tel:+84334928686" class="phone-display">+84.334928686</a>
+                        <p style="font-size:12px; color:#999; margin:4px 0;">Hoặc</p>
+                        <p style="font-size:13px; font-weight:bold; color:#333; margin-bottom:10px;">Chat hỗ trợ trực tuyến</p>
                         
-                        <div class="consulting-desc">Để được hỗ trợ tốt nhất, hãy gọi</div>
-                        <a href="tel:+84334928686" class="hotline-link">+84.334928686</a>
-                        <div class="or-divider">Hoặc</div>
-                        <div class="chat-title">Chat hỗ trợ trực tuyến</div>
-                        
-                        <!-- Cặp nút mạng xã hội chuyển hướng trực tiếp -->
-                        <div class="chat-group-buttons">
-                            <a href="https://zalo.me/0334928686" target="_blank" class="social-chat-btn" title="Liên hệ qua Zalo">
+                        <div class="chat-row">
+                            <a href="https://zalo.me/0334928686" target="_blank" class="btn-chat-link" title="Zalo">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_Zalo.svg" alt="Zalo">
                             </a>
-                            <a href="https://www.facebook.com/share/18j6rAGFuR/" target="_blank" class="social-chat-btn" title="Liên hệ qua Facebook">
+                            <a href="https://www.facebook.com/share/18j6rAGFuR/" target="_blank" class="btn-chat-link" title="Messenger">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
                             </a>
                         </div>
                     </div>
 
-                    <!-- KHỐI ĐIỀN THÔNG TIN BÁO GIÁ KHI KHÁCH HÀNG CÓ NHU CẦU -->
-                    <div class="quote-form-box">
+                    <div class="form-sb-box">
                         <h3>YÊU CẦU BÁO GIÁ</h3>
-                        <form action="#" method="POST" onsubmit="alert('Cảm ơn bạn! Thông tin yêu cầu đã được gửi đến Công ty TNHH Hưng Thịnh. Chúng tôi sẽ liên hệ lại ngay qua số điện thoại của bạn.'); this.reset(); return false;">
-                            <div class="form-control-group">
-                                <input type="text" class="form-input-item" placeholder="Họ tên" required>
+                        <form action="#" method="POST" onsubmit="alert('Hệ thống Hưng Thịnh Eco đã ghi nhận thành công nhu cầu của bạn. Đội ngũ tư vấn viên sẽ gọi lại trực tiếp báo giá qua số điện thoại này trong ít phút!'); this.reset(); return false;">
+                            <div class="input-group">
+                                <input type="text" class="input-control" placeholder="Họ tên của bạn" required>
                             </div>
-                            <div class="form-control-group">
-                                <input type="tel" class="form-input-item" placeholder="Số điện thoại" required pattern="[0-9]{9,11}">
+                            <div class="input-group">
+                                <input type="tel" class="input-control" placeholder="Số điện thoại" required pattern="[0-9]{9,11}">
                             </div>
-                            <div class="form-control-group">
-                                <textarea class="form-textarea-item" placeholder="Bạn đang cần báo giá sản phẩm gì? (Màng chống thấm HDPE / Vải địa kỹ thuật...)" required></textarea>
+                            <div class="input-group">
+                                <textarea class="textarea-control" placeholder="Mô tả cụ thể nhu cầu của bạn (Ví dụ: Cần mua bạt lót ao cá 0.5mm khổ 4m, bạt lót ao tôm số lượng lớn...)" required></textarea>
                             </div>
-                            <button type="submit" class="submit-quote-btn">Nhận Báo Giá</button>
+                            <button type="submit" class="btn-send-form">Gửi Yêu Cầu Ngay</button>
                         </form>
                     </div>
+
+                    <ul class="commit-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Chất lượng cao, nhà cung cấp uy tín</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Giá cả luôn cạnh tranh nhất thị trường</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Giao hàng nhanh, tận tình, chu đáo</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Tư vấn 24/7 thắc mắc từ khách hàng</li>
+                    </ul>
 
                 </div>
             </aside>
@@ -287,27 +458,45 @@
         </div>
     </div>
 
-    <!-- CHÂN TRANG (FOOTER) -->
-    <footer>
+    <section class="footer-details">
         <div class="container">
-            <p>&copy; 2026 <strong>Công ty TNHH Hưng Thịnh</strong> - Chuyên Màng Chống Thấm HDPE & Vải Địa Kỹ Thuật Thương Hiệu Hưng Thịnh Eco.</p>
+            <div class="footer-col">
+                <div class="company-title-ft">Công ty TNHH Hưng Thịnh</div>
+                <div class="info-txt-ft"><strong>Địa chỉ miền bắc:</strong> Khu Phố Cao Xá, Sơn Nam, Hưng Yên.</div>
+                <div class="info-txt-ft"><strong>Địa chỉ miền nam:</strong> KCN Hải Sơn, Đức Hòa, Long An.</div>
+                <div class="info-txt-ft"><strong>Điện thoại liên hệ:</strong> +84.334928686</div>
+                <div class="info-txt-ft"><strong>Email:</strong> hungthinh.ecohy@gmail.com</div>
+            </div>
+            <div class="footer-col">
+                <h4>Hỗ trợ khách hàng</h4>
+                <ul>
+                    <li><a href="#">Chính sách vận chuyển</a></li>
+                    <li><a href="#">Chính sách thanh toán</a></li>
+                    <li><a href="#">Chính sách đổi trả hàng</a></li>
+                    <li><a href="#">Chính sách bảo mật thông tin</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Theo dõi chúng tôi</h4>
+                <p class="info-txt-ft" style="margin-bottom:12px;">Kết nối với Hưng Thịnh Eco để nhận các thông tin ưu đãi mới nhất về vật tư nông nghiệp và màng bạt HDPE nuôi thủy sản.</p>
+                <div class="chat-row" style="justify-content: flex-start;">
+                    <a href="https://www.facebook.com/share/18j6rAGFuR/" target="_blank" class="btn-chat-link"><i class="fa-brands fa-facebook-f" style="color:#1877F2;"></i></a>
+                    <a href="https://zalo.me/0334928686" target="_blank" class="btn-chat-link"><i class="fa-solid fa-comment" style="color:#0084FF;"></i></a>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- HỆ THỐNG NÚT BẤM TIỆN ÍCH NỔI ĐỘNG (GÓC TRÁI MÀN HÌNH MÁY TÍNH & ĐIỆN THOẠI) -->
-    <div class="floating-action-container">
-        <!-- Nút Gọi nhanh nhấp nháy thu hút sự chú ý -->
-        <a href="tel:+84334928686" class="action-circle-btn phone-btn" title="Gọi hotline ngay">
-            <i class="fa-solid fa-phone"></i>
-        </a>
-        <!-- Nút Zalo kết nối nhanh -->
-        <a href="https://zalo.me/0334928686" target="_blank" class="action-circle-btn zalo-btn" title="Nhắn tin Zalo">
-            <i class="fa-solid fa-comment-dots"></i>
-        </a>
-        <!-- Nút Messenger đi thẳng tới Fanpage -->
-        <a href="https://www.facebook.com/share/18j6rAGFuR/" target="_blank" class="action-circle-btn msg-btn" title="Gửi tin nhắn Facebook">
-            <i class="fa-brands fa-facebook-messenger"></i>
-        </a>
+    <div class="bottom-copyright">
+        <div class="container">
+            &copy; 2026 Công ty TNHH Hưng Thịnh. All Rights Reserved. Hệ thống phân phối chính thức trên <a href="https://batthuysan-yohu.online" style="color:#fff; text-decoration:underline;">batthuysan-yohu.online</a>
+        </div>
+    </div>
+
+    <div class="sticky-contacts">
+        <a href="tel:+84334928686" class="contact-circle c-phone" title="Gọi Ngay Hotline"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://zalo.me/0334928686" target="_blank" class="contact-circle c-zalo" title="Nhắn Tin Zalo"><i class="fa-solid fa-comment-dots"></i></a>
+        <a href="https://www.facebook.com/share/18j6rAGFuR/" target="_blank" class="contact-circle c-fb" title="Facebook Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
     </div>
 
 </body>

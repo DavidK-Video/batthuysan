@@ -206,6 +206,75 @@
         .back-to-top { position: fixed; bottom: 22px; right: 18px; width: 42px; height: 42px; background: var(--primary-color); color: #fff; border: none; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(0,0,0,0.2); z-index: 9998; transition: 0.2s; }
         .back-to-top:hover { background: #1b5e20; }
 
+        /* ===== HEADER CONTACT RIGHT ===== */
+        .header-contact-right { display: flex; flex-direction: column; align-items: flex-end; font-size: 13px; gap: 3px; }
+        .header-contact-right a { color: var(--primary-color); text-decoration: none; font-weight: bold; }
+        .header-contact-right span { color: #555; }
+
+        /* ===== NAV BAR XANH THỨ 2 (danh mục ngang) ===== */
+        .nav-bar-green {
+            background: var(--primary-color);
+            position: sticky; top: 72px; z-index: 999;
+        }
+        .nav-bar-green-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; overflow-x: auto;
+            padding: 0 20px;
+        }
+        .nav-bar-green-inner::-webkit-scrollbar { height: 3px; }
+        .nav-bar-green-inner::-webkit-scrollbar-thumb { background: #1b5e20; }
+        .nav-green-item { position: relative; flex-shrink: 0; }
+        .nav-green-item > a {
+            display: block; color: #fff; text-decoration: none;
+            font-size: 13.5px; font-weight: 600; padding: 11px 16px;
+            white-space: nowrap; transition: 0.2s; cursor: pointer;
+            border-right: 1px solid rgba(255,255,255,0.15);
+        }
+        .nav-green-item > a:hover, .nav-green-item.active > a { background: rgba(0,0,0,0.18); }
+        .nav-green-item .sub-dropdown {
+            position: absolute; top: 100%; left: 0;
+            background: #fff; min-width: 260px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            border-top: 3px solid var(--accent-color);
+            display: none; z-index: 9999; border-radius: 0 0 6px 6px;
+        }
+        .nav-green-item .sub-dropdown a {
+            display: block; padding: 11px 18px; color: #444;
+            font-size: 14px; border-bottom: 1px solid #f0f0f0;
+            text-decoration: none; transition: 0.2s; cursor: pointer; font-weight: normal;
+        }
+        .nav-green-item .sub-dropdown a:hover { background: #f9fbe7; color: var(--primary-color); padding-left: 24px; }
+        .nav-green-item:hover .sub-dropdown { display: block; }
+
+        /* ===== FORM BÁO GIÁ SIDEBAR ===== */
+        .baogia-form input, .baogia-form textarea {
+            width: 100%; border: 1px solid #ddd; border-radius: 4px;
+            padding: 10px 12px; font-size: 14px; margin-bottom: 10px;
+            outline: none; transition: border 0.2s;
+        }
+        .baogia-form input:focus, .baogia-form textarea:focus { border-color: var(--primary-color); }
+        .baogia-form textarea { height: 90px; resize: vertical; }
+        .baogia-form button {
+            width: 100%; background: var(--primary-color); color: #fff;
+            border: none; padding: 12px; font-size: 15px; font-weight: bold;
+            border-radius: 4px; cursor: pointer; letter-spacing: 1px; transition: 0.2s;
+        }
+        .baogia-form button:hover { background: #1b5e20; }
+
+        /* ===== ZALO FACEBOOK BUTTONS SIDEBAR ===== */
+        .social-btns { display: flex; gap: 10px; margin-top: 10px; }
+        .social-btn {
+            flex: 1; display: flex; align-items: center; justify-content: center;
+            gap: 6px; padding: 10px; border-radius: 8px; font-weight: bold;
+            font-size: 14px; text-decoration: none; color: #fff; transition: 0.2s;
+        }
+        .social-btn:hover { opacity: 0.88; }
+        .btn-zalo-sq { background: #0068ff; }
+        .btn-fb-sq { background: #1877f2; }
+        .sidebar-hotline-big { text-align: center; margin: 10px 0; }
+        .sidebar-hotline-big a { font-size: 24px; font-weight: 900; color: var(--primary-color); text-decoration: none; letter-spacing: 1px; }
+        .sidebar-hotline-big p { font-size: 13px; color: #777; margin-bottom: 4px; }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 900px) {
             .main-container { grid-template-columns: 1fr; }
@@ -228,10 +297,10 @@
 
     <!-- TOP BAR -->
     <div class="top-bar">
-        <div>📍 Khu Đô Thị Phố Hiến, Thành phố Hưng Yên | 🕐 Thứ 2 – Thứ 7: 7:30 – 17:30</div>
+        <div>📍 Khu Đô Thị Phố Hiến, Thành phố Hưng Yên</div>
         <div class="top-right">
-            <a href="tel:0339606969">📞 0339 60 69 69</a>
-            <a href="tel:0334928686">📞 0334 92 86 86</a>
+            <span>✉ hungthinh.covn@gmail.com</span>
+            <span>🕐 08:00 – 17:00</span>
         </div>
     </div>
 
@@ -246,12 +315,19 @@
                 </div>
             </div>
 
-            <div class="header-search">
-                <input type="text" placeholder="Tìm sản phẩm, giải pháp...">
-                <button>🔍</button>
+            <nav>
+                <div class="nav-item"><a onclick="showPage('home', 'Trang chủ')">Trang chủ</a></div>
+                <div class="nav-item"><a href="#">Giới thiệu</a></div>
+                <div class="nav-item"><a href="#">Liên hệ</a></div>
+                <div class="nav-item"><a href="#">Bài viết</a></div>
+            </nav>
+
+            <div class="header-contact-right">
+                <span>✉ <a href="mailto:hungthinh.covn@gmail.com">hungthinh.covn@gmail.com</a></span>
+                <span>🕐 08:00 – 17:00</span>
             </div>
 
-            <nav>
+            <nav style="display:none">
                 <div class="nav-item"><a onclick="showPage('home', 'Trang chủ')">Trang chủ</a></div>
                 <div class="nav-item">
                     <a>Màng Chống Thấm HDPE ▾</a>
@@ -277,6 +353,37 @@
             </nav>
         </div>
     </header>
+
+    <!-- NAV BAR XANH - DANH MỤC SẢN PHẨM -->
+    <div class="nav-bar-green">
+        <div class="nav-bar-green-inner">
+            <div class="nav-green-item active">
+                <a onclick="showPage('home','Trang chủ')">Màng Chống Thấm HDPE</a>
+                <div class="sub-dropdown">
+                    <a onclick="showPage('bat-nuoi-ca','Trang chủ » Bạt Lót Ao Hồ Nuôi Cá')">Bạt Lót Ao Hồ Nuôi Cá</a>
+                    <a onclick="showPage('be-bat-hdpe','Trang chủ » Bể Bạt HDPE')">Bể Bạt HDPE Lắp Sẵn</a>
+                    <a onclick="showPage('bat-nuoi-tom','Trang chủ » Bạt Lót Ao Hồ Nuôi Tôm')">Bạt Lót Ao Hồ Nuôi Tôm</a>
+                    <a onclick="showPage('bat-mai-nha','Trang chủ » Bạt Chống Thấm Mái Nhà')">Bạt Chống Thấm Mái Nhà</a>
+                    <a onclick="showPage('bat-chua-nuoc','Trang chủ » Bạt Lót Ao Hồ Chứa Nước')">Bạt Lót Ao Hồ Chứa Nước</a>
+                    <a onclick="showPage('bat-san-thuong','Trang chủ » Bạt Chống Thấm Sân Thượng')">Bạt Chống Thấm Sân Thượng</a>
+                    <a onclick="showPage('bat-biogas','Trang chủ » Bạt Phủ Hầm Biogas')">Bạt Phủ Hầm Biogas</a>
+                    <a onclick="showPage('phu-kien-bat','Trang chủ » Phụ Kiện Màng Bạt HDPE')">Phụ Kiện Màng - Bạt HDPE</a>
+                </div>
+            </div>
+            <div class="nav-green-item">
+                <a onclick="showPage('vai-dia-khong-det','Trang chủ » Vải Địa Kỹ Thuật')">Vải Địa Kỹ Thuật</a>
+                <div class="sub-dropdown">
+                    <a onclick="showPage('vai-dia-khong-det','Trang chủ » Vải Địa Không Dệt')">Vải Địa Kỹ Thuật Không Dệt</a>
+                    <a onclick="showPage('vai-dia-det','Trang chủ » Vải Địa Có Dệt')">Vải Địa Kỹ Thuật Có Dệt</a>
+                    <a onclick="showPage('vai-dia-gia-cuong','Trang chủ » Vải Địa Gia Cường')">Vải Địa Gia Cường Nền Đất</a>
+                </div>
+            </div>
+            <div class="nav-green-item"><a href="#">Ống Tưới Nhỏ Giọt</a></div>
+            <div class="nav-green-item"><a href="#">Bạt Phủ Chống Cỏ</a></div>
+            <div class="nav-green-item"><a href="#">Lưới Che Nắng</a></div>
+            <div class="nav-green-item"><a href="#">Bầu Ươm</a></div>
+        </div>
+    </div>
 
     <!-- BREADCRUMB -->
     <div class="breadcrumb">
@@ -786,6 +893,37 @@
         <!-- ===== SIDEBAR ===== -->
         <aside>
 
+            <!-- WIDGET TƯ VẤN + ZALO FACEBOOK -->
+            <div class="widget">
+                <div class="widget-title">CHÚNG TÔI SẴN SÀNG TƯ VẤN</div>
+                <div class="sidebar-hotline-big">
+                    <p>Để được hỗ trợ tốt nhất, hãy gọi</p>
+                    <a href="tel:0339606969">0339 60 69 69</a>
+                </div>
+                <p style="text-align:center; font-size:13px; color:#666; margin-bottom:6px;">Hoặc <strong>Chat hỗ trợ trực tuyến</strong></p>
+                <div class="social-btns">
+                    <a href="https://zalo.me/0339606969" target="_blank" class="social-btn btn-zalo-sq">
+                        <svg width="22" height="22" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="#0068FF"/><text x="50%" y="68%" text-anchor="middle" fill="white" font-size="18" font-weight="bold" font-family="Arial">Z</text></svg>
+                        Zalo
+                    </a>
+                    <a href="https://www.facebook.com/hungthinheco" target="_blank" class="social-btn btn-fb-sq">
+                        <svg width="22" height="22" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="#1877F2"/><text x="50%" y="70%" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial">f</text></svg>
+                        Facebook
+                    </a>
+                </div>
+            </div>
+
+            <!-- FORM YÊU CẦU BÁO GIÁ -->
+            <div class="widget">
+                <div class="widget-title">YÊU CẦU BÁO GIÁ</div>
+                <div class="baogia-form">
+                    <input type="text" placeholder="Họ tên">
+                    <input type="tel" placeholder="Số điện thoại">
+                    <textarea placeholder="Bạn đang cần báo giá sản phẩm gì?"></textarea>
+                    <button onclick="alert('Cảm ơn! Chúng tôi sẽ liên hệ lại sớm nhất.')">NHẬN BÁO GIÁ</button>
+                </div>
+            </div>
+
             <!-- Hotline widget -->
             <div class="widget">
                 <div class="widget-title">📞 Tư vấn & Mua hàng</div>
@@ -799,7 +937,7 @@
                 </div>
                 <div class="hotline-box hotline-blue">
                     <p>Liên hệ mua hàng nhanh</p>
-                    <a href="tel:0334 92 86 86" class="hotline-number">033 92 86 86</a>
+                    <a href="tel:0339606969" class="hotline-number">0339 60 69 69</a>
                 </div>
             </div>
 
@@ -879,7 +1017,7 @@
                 <h4>Thông tin liên hệ</h4>
                 <p><strong>Công ty TNHH Hưng Thịnh Eco</strong></p>
                 <p>📍 Địa chỉ miền Bắc: Khu Đô Thị Phố Hiến, Thành phố Hưng Yên.</p>
-                <p>📞 Hotline mua hàng: <a href="tel:0334928686">0334 92 86 86</a></p>
+                <p>📞 Hotline mua hàng: <a href="tel:0339606969">0339 60 69 69</a></p>
                 <p>📞 Hotline dự án: <a href="tel:0334928686">0334 92 86 86</a></p>
                 <p>🕐 Làm việc: Thứ 2 – Thứ 7 | 7:30 – 17:30</p>
             </div>
